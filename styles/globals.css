@@ -7,8 +7,8 @@ body {
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  /* color: inherit; */
+  /* text-decoration: none; */
 }
 
 * {
@@ -21,6 +21,19 @@ a {
   }
   body {
     color: white;
-    background: black;
+    /* background: black; */
   }
 }
+
+/* 
+main color #001233
+nav items and border color for some buttons color #efe0ca
+text color h1 h2 button and border text in the body #001233
+logo color #ff595a
+buttons #ff595a => redish and #ff595a => beige
+div bg #efe0ca and #ffffff
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
