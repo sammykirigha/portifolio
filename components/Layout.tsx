@@ -9,13 +9,13 @@ type Props = {
 const Layout = (props: Props) => {
   const { children } = props;
   return (
-    <>
+    <div className="container">
       <Meta />
       <Navbar />
       <div>
         <main>{children}</main>
       </div>
-    </>
+    </div>
   );
 };
 

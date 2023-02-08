@@ -178,7 +178,7 @@ const HomePage = (props: Props) => {
               </p>
             </div>
             <div className="w-full mt-10 px-8">
-              <button className="font-[500] rounded-lg bg-[#e71356] w-[100%] text-white h-[40px] group-hover:bg-white group-hover:text-[#e71356]">
+              <button className="font-[500] rounded-lg bg-[#ff595a] w-[100%] text-white h-[40px] group-hover:bg-[#ff595a] group-hover:text-[#001233]">
                 Find out
               </button>
             </div>
