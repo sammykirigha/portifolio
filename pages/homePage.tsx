@@ -3,11 +3,11 @@ import Image from "next/image";
 import image from "../public/image.png";
 import dashboard from "../public/assets/lottery-app.png";
 import profile from "../public/assets/profile.jpg";
-import logo from "../public/logo.png";
 import { MdLocationOn, MdCallMade } from "react-icons/md";
 import { BsLinkedin, BsGithub, BsWhatsapp } from "react-icons/bs";
+import { BiUpload } from "react-icons/bi";
 import { langs } from "../utils/language";
-import { FaRegLightbulb } from "react-icons/fa";
+import { FaRegLightbulb, FaDownload } from "react-icons/fa";
 
 type Props = {};
 
@@ -183,36 +183,36 @@ const HomePage = (props: Props) => {
               </button>
             </div>
           </div>
-          <div className="mt-10 bg-white pb-10 rounded-lg group hover:bg-[#e71356]">
-            <Image src={logo} alt="" className="h-20 w-24 p-1" />
+          <div className="mt-10 bg-white pb-10 rounded-lg group hover:bg-[#efe0ca]">
+            <FaRegLightbulb className="h-12 w-[100px] mt-5 !text-[#001233] top-0" />
             <div className="px-8 mt-6">
-              <p className="text-black text-[1.3rem] font-[600] group-hover:text-white">
+              <p className="text-[#001233] text-[1.3rem] font-[600] group-hover:text-text-[#001233]">
                 Mobile Application Development
               </p>
-              <p className="text-slate-80 group-hover:text-white">
+              <p className="text-text-[#001233] mt-3 group-hover:text-text-[#001233]">
                 Design mobile application specifically for use on mobile devices
                 such as smartphones, tables, etc
               </p>
             </div>
             <div className="w-full mt-10 px-8">
-              <button className="font-[500] rounded-lg bg-[#e71356] w-[100%] text-white h-[40px] group-hover:bg-white group-hover:text-[#e71356]">
+              <button className="font-[500] rounded-lg bg-[#ff595a] w-[100%] text-white h-[40px] group-hover:bg-[#ff595a] group-hover:text-[#001233]">
                 Find out
               </button>
             </div>
           </div>
-          <div className="mt-10 bg-white pb-10 rounded-lg group hover:bg-[#e71356]">
-            <Image src={logo} alt="" className="h-20 w-24 p-1" />
+          <div className="mt-10 bg-white pb-10 rounded-lg group hover:bg-[#efe0ca]">
+            <FaRegLightbulb className="h-12 w-[100px] mt-5 !text-[#001233] top-0" />
             <div className="px-8 mt-6">
-              <p className="text-black text-[1.3rem] font-[600] group-hover:text-white">
+              <p className="text-[#001233] text-[1.3rem] font-[600] group-hover:text-text-[#001233]">
                 Mobile Application Development
               </p>
-              <p className="text-slate-80 group-hover:text-white">
-                Design mobile application specifically for use on moboli devices
+              <p className="text-text-[#001233] mt-3 group-hover:text-text-[#001233]">
+                Design mobile application specifically for use on mobile devices
                 such as smartphones, tables, etc
               </p>
             </div>
             <div className="w-full mt-10 px-8">
-              <button className="font-[500] rounded-lg bg-[#e71356] w-[100%] text-white h-[40px] group-hover:bg-white group-hover:text-[#e71356]">
+              <button className="font-[500] rounded-lg bg-[#ff595a] w-[100%] text-white h-[40px] group-hover:bg-[#ff595a] group-hover:text-[#001233]">
                 Find out
               </button>
             </div>
@@ -223,28 +223,31 @@ const HomePage = (props: Props) => {
       {/* section five */}
       <div className="h-auto bg-white mt-10 px-5 lg:px-20 2xl:px-60 pt-10">
         <div className="flex items-center justify=center flex-col">
-          <h3 className="text-slate-700 text-[2rem] ">Featured projects</h3>
-          <h1 className="text-slate-900 font-[600] text-[2.2rem]">
+          <h3 className="text-[#001233] text-[2rem] ">Featured projects</h3>
+          <h1 className="text-[#001233] font-[600] text-[2.2rem]">
             What I Have Worked On
           </h1>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:flex-row xl:grid-cols-3 gap-3 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 mt-8 lg:flex-row xl:grid-cols-3 gap-3 ">
           <div className="relative min-h-[225px] group bg-opacity-40 hover:bg-opacity-100 justify-center rounded-xl duration-150 ease-linear p-4 flex flex-col items-center">
             <Image
               src={dashboard}
               alt=""
               className=" rounded-lg boarder h-auto md:52 w-full"
             />
-            <h4 className="mt-4 self-start">
+            <h4 className="mt-4 self-start text-[#001233]">
               A dashboard for both admin and the normal user.
             </h4>
             <a
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-300 text-sm flex items-center gap-1.5 bg-opacity-20 px-2 underline py-1 mt-2 text-accent self-start rounded-lg"
+              style={{
+                textDecoration: "none",
+              }}
+              className="bg-[#001233]/70 px-2 py-[3.5px] text-[#efe0ca] text-sm flex items-center gap-1.5 px-2 underline mt-2 text-accent self-start rounded-lg"
             >
-              see the app
+              <BiUpload className=" h-4 w-4" /> see the app
             </a>
           </div>
 
@@ -261,9 +264,12 @@ const HomePage = (props: Props) => {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-300 text-sm flex items-center gap-1.5 bg-opacity-20 px-2 underline py-1 mt-2 text-accent self-start rounded-lg"
+              style={{
+                textDecoration: "none",
+              }}
+              className="bg-[#001233]/70 px-2 py-[3.5px] text-[#efe0ca] text-sm flex items-center gap-1.5 px-2 underline mt-2 text-accent self-start rounded-lg"
             >
-              see the app
+              <BiUpload className=" h-4 w-4" /> see the app
             </a>
           </div>
 
@@ -280,9 +286,12 @@ const HomePage = (props: Props) => {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-300 text-sm flex items-center gap-1.5 bg-opacity-20 px-2 underline py-1 mt-2 text-accent self-start rounded-lg"
+              style={{
+                textDecoration: "none",
+              }}
+              className="bg-[#001233]/70 px-2 py-[3.5px] text-[#efe0ca] text-sm flex items-center gap-1.5 px-2 underline mt-2 text-accent self-start rounded-lg"
             >
-              see the app
+              <BiUpload className=" h-4 w-4" /> see the app
             </a>
           </div>
 
@@ -299,17 +308,25 @@ const HomePage = (props: Props) => {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-300 text-sm flex items-center gap-1.5 bg-opacity-20 px-2 underline py-1 mt-2 text-accent self-start rounded-lg"
+              style={{
+                textDecoration: "none",
+              }}
+              className="bg-[#001233]/70 px-2 py-[3.5px] text-[#efe0ca] text-sm flex items-center gap-1.5 px-2 underline mt-2 text-accent self-start rounded-lg"
             >
-              see the app
+              <BiUpload className=" h-4 w-4" /> see the app
             </a>
           </div>
+        </div>
+        <div className="flex items-center justify-center block">
+          <button className="bg-[#ff595a] rounded-full w-fitContent px-3 py-2 text-lg font-[600] hover:bg-[#001233] hover:text-[#efe0ca] ">
+            View All Projects
+          </button>
         </div>
       </div>
 
       {/* section six */}
       <div className="h-auto bg-gray-200 mt-10 px-5 lg:px-20 2xl:px-60 py-10 flex flex-col items-center justify-center">
-        <h1 className="text-slate-900 text-[2.7rem] font-[700]">About Me</h1>
+        <h1 className="text-[#001233] text-[2.7rem] font-[700]">About Me</h1>
         <div className="mt-5">
           <Image
             src={profile}
@@ -319,29 +336,66 @@ const HomePage = (props: Props) => {
             className="rounded-full"
           />
         </div>
-        <div className="mt-5 flex flex-col items-center">
-          <p className="flex text-center">
-            Skills/Interests: JavaScript, React, TypeScript, Next, Express,
-            Node, Redux CSS, HTML, Git, GitLab, SQL, PostgreSQL, MongoDB, Ms
-            SQL, Docker among others
+        <div className="mt-10 flex flex-col items-center max-w-[600px]">
+          <p className="flex text-[1rem] text-center text-center max-w-[600px] justify-center">
+            <span className="whitespace-nowrap">Key Skills:</span>
+            <div className="flex flex-col gap-6">
+              <div>
+                {[
+                  "Nodejs",
+                  "React",
+                  "TypeScript",
+                  "Next",
+                  "Express",
+                  "Tailwind",
+                ].map((item, index) => {
+                  return (
+                    <span
+                      key={index}
+                      className="w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] "
+                    >
+                      {item}
+                    </span>
+                  );
+                })}
+              </div>
+              <div className="">
+                {["PostgreSQL", "Docker", "HTML5", "CSS3", "AWS"].map(
+                  (item, index) => {
+                    return (
+                      <span
+                        key={index}
+                        className="w-fit  text-[0.9rem] text-center ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] "
+                      >
+                        {item}
+                      </span>
+                    );
+                  }
+                )}
+              </div>
+            </div>
           </p>
-          <div>
-            <button>Contact Me Via Email</button>
-            <button>Download My CV</button>
+          <div className="mt-16 flex gap-4">
+            <button className="bg-[#ff595a] w-fit rounded-full px-3 font-[700] py-2 text-[#001233] text-[#001233]">
+              Contact Me Via Email
+            </button>
+            <button className="bg-[#ff595a] flex gap-2 justify-center items-center w-fit rounded-full px-3 font-[700] py-2 text-[#001233] text-[#001233]">
+              <FaDownload /> Download My CV
+            </button>
           </div>
         </div>
       </div>
 
       {/* section seven */}
       <div className="h-auto bg-white mt-10 px-5 lg:px-20 2xl:px-60 pt-10 flex items-center justify-center">
-        <div className="bg-[#e71356] flex flex-col items-center justify-center h-72 w-[750px] rounded-lg">
-          <h1 className="text-white text-[2.5rem] font-[700] mt-8">
+        <div className=" bg-[#efe0ca] mb-8 flex flex-col items-center justify-center h-72 w-[750px] rounded-lg">
+          <h1 className="text-[#001233] text-[2.5rem] font-[700] mt-8">
             We can Work Together
           </h1>
-          <p className="text-[1.5rem] mt-10">
-            Want to get your project done?. Ready to deliver your expectation
+          <p className="text-[1.5rem] text-[#001233] font-[500] mt-10">
+            Want to get your project done? Ready to deliver your expectation
           </p>
-          <button className="mt-10 bg-gray-200 py-2 px-5 rounded-full hover:tracking-widest text-lg hover:bg-opacity-90 transition-all duration-150 ease-linear text-[#e71356] ">
+          <button className="mt-10 bg-[#efe0ca] border border-[#001233] text-[#001233] font-[600] hover:bg-[#001233] hover:text-[#efe0ca] py-2 px-5 rounded-full hover:tracking-widest text-lg hover:bg-opacity-90 transition-all duration-150 ease-linear  ">
             Get In Touch
           </button>
         </div>
