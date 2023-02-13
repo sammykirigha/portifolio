@@ -22,10 +22,13 @@ const Contact = (props: Props) => {
         <h1 className="text-[2.5rem] font-[700] text-dark opacity-80 uppercase tracking-[0.1em] leading-[3rem]">
           I Love to hear from you, <br></br> Get in touch 👋{" "}
         </h1>
-        <p className="text-lg text-center mt-10 ">
+        <p className="text-[1.2rem] text-center mt-7 ">
           Feel free to contact me with questions about any of my project or
           services. <br></br> I'll get back to you within 24 hours! <br></br>
-          <strong className=""> +254707256013 dkirigha18@gmail.com</strong>
+          <strong className="text-light-red">
+            {" "}
+            +254707256013 dkirigha18@gmail.com
+          </strong>
         </p>
         <div className="">
           <form
@@ -39,7 +42,7 @@ const Contact = (props: Props) => {
                 </label>
                 <input
                   {...register("name")}
-                  className="h-[50px] mt-1 form-input border border-light-red focus:border-0 focus:ring focus:ring-1 focus:ring-dark w-[400px] "
+                  className="h-[50px] mt-1 form-input border border-light-red focus:border-0 focus:ring focus:ring-1 focus:ring-light-red w-[400px] "
                 />
               </div>
               <div className="flex flex-col">
@@ -48,7 +51,7 @@ const Contact = (props: Props) => {
                 </label>
                 <input
                   {...register("email")}
-                  className="h-[50px] mt-1 form-input border border-light-red focus:border-0 focus:ring focus:ring-1 focus:ring-dark w-[400px] "
+                  className="h-[50px] mt-1 form-input border border-light-red focus:border-0 focus:ring focus:ring-1 focus:ring-light-red w-[400px] "
                 />
               </div>
             </div>
@@ -59,7 +62,7 @@ const Contact = (props: Props) => {
               </label>
               <input
                 {...register("subject")}
-                className="h-[50px] mt-1 form-input border border-light-red focus:border-0 focus:ring focus:ring-1 focus:ring-dark w-full "
+                className="h-[50px] mt-1 form-input border border-light-red focus:border-0 focus:ring focus:ring-1 focus:ring-light-red w-full "
               />
             </div>
 
@@ -70,13 +73,12 @@ const Contact = (props: Props) => {
               <textarea
                 {...register("message")}
                 rows={5}
-                className="border border-light-red focus:border-0 focus:ring focus:ring-1 focus:ring-dark"
+                className="border border-light-red focus:border-0 focus:ring focus:ring-1 focus:ring-light-red"
               />
             </div>
-            <input
-              type="submit"
-              className="block bg-light-red text-dark w-fit mx-auto mt-6 px-7 cursor-pointer py-1 rounded-full"
-            />
+            <button className="block bg-light-red text-white w-fit mx-auto mt-6 px-12 cursor-pointer py-2 rounded-full">
+              Send Message
+            </button>
           </form>
         </div>
       </div>
