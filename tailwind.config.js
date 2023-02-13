@@ -21,5 +21,5 @@ module.exports = {
     "bg-image":
       "url('./public/gradient-islamic-pattern-background-vector.jpg')",
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

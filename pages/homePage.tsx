@@ -337,7 +337,7 @@ const HomePage = (props: Props) => {
           />
         </div>
         <div className="mt-10 flex flex-col items-center max-w-[600px]">
-          <p className="flex text-[1rem] text-center text-center max-w-[600px] justify-center">
+          <div className="flex text-[1rem] text-center text-center max-w-[600px] justify-center">
             <span className="whitespace-nowrap">Key Skills:</span>
             <div className="flex flex-col gap-6">
               <div>
@@ -374,7 +374,7 @@ const HomePage = (props: Props) => {
                 )}
               </div>
             </div>
-          </p>
+          </div>
           <div className="mt-16 flex gap-4">
             <button className="bg-[#ff595a] w-fit rounded-full px-3 font-[700] py-2 text-[#001233] text-[#001233]">
               Contact Me Via Email

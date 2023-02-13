@@ -56,7 +56,7 @@ const Navbar = (props: Props) => {
             </Link>
             <Link
               onClick={() => setShowNavItems(false)}
-              href="/contact-me"
+              href="/Contact"
               className="lg:ml-10 mt-4 lg:mt-0 !text-[#efe0ca] hover:underline cursor-pointer text-xl font-medium tracking-wide"
             >
               Contact me
