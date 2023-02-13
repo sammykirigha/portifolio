@@ -34,10 +34,10 @@ const HomePage = (props: Props) => {
             </span>
             <p className="text-[#001233] font-[500]  text-[1.2rem] mt-6 leading-[1.7rem] pr-0 md:pr-5">
               I became a software developer because I knew that development was
-              a road to the future that I wanted to be a part of. I'm given
+              a road to the future that I wanted to be a part of. I am given
               challenges every day that I thrive on understanding and solving,
-              and I've tackled projects for e-commerce, booking systems, etc.
-              I'm a perceptive, dedicated dreamer, and I enjoy using JavaScript
+              and I have tackled projects for e-commerce, booking systems, etc.
+              I am a perceptive, dedicated dreamer, and I enjoy using JavaScript
               for its ease of use and verstatility. I love listening to music,
               watching movies, and playing videogames, and watching soccer a big
               fun of manchester united.
