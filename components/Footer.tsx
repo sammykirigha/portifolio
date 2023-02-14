@@ -70,7 +70,7 @@ const Footer = (props: Props) => {
           <br></br>
           Copyright @ Samuel Kirigha 2023
         </p>
-        <button className="mr-10 text-dark text-[1rem] bg-light-red w-fit px-2 py-1 rounded-full font-[700]">
+        <button className="mr-10 text-dark text-[1rem] bg-light-red w-fit px-3 py-1 rounded-full font-[700]">
           Contact me via email
         </button>
       </div>
