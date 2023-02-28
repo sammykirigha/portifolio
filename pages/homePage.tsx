@@ -12,6 +12,21 @@ import { FaRegLightbulb, FaDownload } from "react-icons/fa";
 type Props = {};
 
 const HomePage = (props: Props) => {
+  const onDownloadCv = () => {
+    fetch("/myResume.pdf").then((response) => {
+      console.log("====================================");
+      console.log(response);
+      console.log("====================================");
+      response.blob().then((blob) => {
+        const fileURL = window.URL.createObjectURL(blob);
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "myResume.pdf";
+        alink.click();
+      });
+    });
+  };
+
   return (
     <div className="">
       {/* introduction */}
@@ -393,10 +408,18 @@ const HomePage = (props: Props) => {
             </div>
           </div>
           <div className="mt-16 flex flex-col md:flex-row gap-4">
-            <button className="bg-[#ff595a] w-fit rounded-full px-3 font-[700] py-2 text-[#001233] text-[#001233]">
+            <button
+              onClick={(e) =>
+                (window.location.href = "mailto:dkirigha18@gmail.com")
+              }
+              className="bg-[#ff595a] w-fit rounded-full px-3 font-[700] py-2 text-[#001233] text-[#001233]"
+            >
               Contact Me Via Email
             </button>
-            <button className="bg-[#ff595a] flex gap-2 justify-center items-center w-fit rounded-full px-3 font-[700] py-2 text-[#001233] text-[#001233]">
+            <button
+              onClick={onDownloadCv}
+              className="bg-[#ff595a] flex gap-2 justify-center items-center w-fit rounded-full px-3 font-[700] py-2 text-[#001233] text-[#001233]"
+            >
               <FaDownload /> Download My CV
             </button>
           </div>
