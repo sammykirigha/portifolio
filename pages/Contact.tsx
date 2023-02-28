@@ -17,9 +17,9 @@ const Contact = (props: Props) => {
     console.log("data", data);
   };
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center px-5 lg:px-20 2xl:px-60 ">
       <div className=" flex flex-col  justify-center items-center mt-16">
-        <h1 className="text-[2.5rem] font-[700] text-dark opacity-80 uppercase tracking-[0.1em] leading-[3rem]">
+        <h1 className="text-[2rem] lg:text-[2.5rem] tracking-[0.03em] lg:tracking-[0.1em] text-center font-[700] text-dark opacity-80 uppercase  leading-[3rem]">
           I Love to hear from you, <br></br> Get in touch 👋{" "}
         </h1>
         <p className="text-[1.2rem] text-center mt-7 ">
@@ -30,19 +30,19 @@ const Contact = (props: Props) => {
             +254707256013 dkirigha18@gmail.com
           </strong>
         </p>
-        <div className="">
+        <div className="w-[100%] ">
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col px-3 my-4 mt-12 mb-10"
           >
-            <div className="flex flex-row justify-between gap-4">
+            <div className="flex flex-col lg:flex-row justify-between gap-4">
               <div className="flex flex-col">
                 <label className="text-[1.2rem] font-[400] text-dark">
                   Your Name
                 </label>
                 <input
                   {...register("name")}
-                  className="h-[50px] mt-1 form-input border border-light-red focus:border-0 focus:ring focus:ring-1 focus:ring-light-red w-[400px] "
+                  className="h-[50px] mt-1 form-input border border-light-red focus:border-0 focus:ring focus:ring-1 focus:ring-light-red w-full lg:w-[400px] "
                 />
               </div>
               <div className="flex flex-col">
@@ -51,7 +51,7 @@ const Contact = (props: Props) => {
                 </label>
                 <input
                   {...register("email")}
-                  className="h-[50px] mt-1 form-input border border-light-red focus:border-0 focus:ring focus:ring-1 focus:ring-light-red w-[400px] "
+                  className="h-[50px] mt-1 form-input border border-light-red focus:border-0 focus:ring focus:ring-1 focus:ring-light-red w-full lg:w-[400px] "
                 />
               </div>
             </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { GoThreeBars } from "react-icons/go";
 import { GrClose } from "react-icons/gr";
+import { MdClose } from "react-icons/md";
 import { FaRegLightbulb } from "react-icons/fa";
 
 type Props = {};
@@ -29,39 +30,39 @@ const Navbar = (props: Props) => {
             <Link
               onClick={() => setShowNavItems(false)}
               href="/"
-              className="lg:ml-10 mt-4 lg:mt-0 !text-[#efe0ca] hover:underline  cursor-pointer text-xl font-medium tracking-wide"
+              className="lg:ml-7 mt-4 lg:mt-0 !text-dark lg:!text-[#efe0ca] hover:underline  cursor-pointer text-xl font-medium tracking-wide"
             >
               Home
             </Link>
             <Link
               onClick={() => setShowNavItems(false)}
               href="/About"
-              className="lg:ml-10 mt-4 lg:mt-0 !text-[#efe0ca] hover:underline cursor-pointer text-xl font-medium tracking-wide"
+              className="lg:ml-7 mt-4 lg:mt-0 !text-dark lg:!text-[#efe0ca] hover:underline cursor-pointer text-xl font-medium whitespace-nowrap xl:tracking-wide"
             >
               About me
             </Link>
             <Link
               onClick={() => setShowNavItems(false)}
               href="/Services"
-              className="lg:ml-10 mt-4 lg:mt-0 !text-[#efe0ca] hover:underline cursor-pointer text-xl font-medium tracking-wide"
+              className="lg:ml-7 mt-4 lg:mt-0 !text-dark lg:!text-[#efe0ca] hover:underline cursor-pointer text-xl font-medium tracking-wide"
             >
               Services
             </Link>
             <Link
               onClick={() => setShowNavItems(false)}
               href="/Blogs"
-              className="lg:ml-10 mt-4 lg:mt-0 !text-[#efe0ca] hover:underline cursor-pointer text-xl font-medium tracking-wide"
+              className="lg:ml-7 mt-4 lg:mt-0 !text-dark lg:!text-[#efe0ca] hover:underline cursor-pointer text-xl font-medium tracking-wide"
             >
               Blogs
             </Link>
             <Link
               onClick={() => setShowNavItems(false)}
               href="/Contact"
-              className="lg:ml-10 mt-4 lg:mt-0 !text-[#efe0ca] hover:underline cursor-pointer text-xl font-medium tracking-wide"
+              className="lg:ml-7 mt-4 lg:mt-0 !text-dark lg:!text-[#efe0ca] hover:underline cursor-pointer text-xl font-medium whitespace-nowrap tracking-wide"
             >
               Contact me
             </Link>
-            <button className="!bg-[#efe0ca] text-[#001233] cursor-pointer text-xl font-medium lg:ml-10 mt-4 lg:mt-0 border border-[#efe0ca] rounded-full px-5 py-1 hover:bg-[#e71356]">
+            <button className="!bg-[#efe0ca] text-[#001233] cursor-pointer text-xl font-medium whitespace-nowrap lg:ml-8 mt-6 xl:ml-10 lg:mt-0 border border-[#efe0ca] rounded-full px-3 py-1 hover:bg-[#e71356]">
               Hire Me
             </button>
           </div>
@@ -70,9 +71,9 @@ const Navbar = (props: Props) => {
             className="ml-auto sm:block lg:hidden"
           >
             {showNavItems ? (
-              <GrClose className="h-20 ml-auto cursor-pointer " />
+              <MdClose className="h-20 ml-auto cursor-pointer text-2xl font-[700] !text-beige" />
             ) : (
-              <GoThreeBars className="h-20 ml-auto cursor-pointer " />
+              <GoThreeBars className="h-20 ml-auto cursor-pointer !text-beige " />
             )}
           </div>
         </div>

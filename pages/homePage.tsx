@@ -30,7 +30,7 @@ const HomePage = (props: Props) => {
   return (
     <div className="">
       {/* introduction */}
-      <div className=" grid grid-cols-1 md:grid-cols-2  w-full px-5 lg:px-20 2xl:px-60 py-[30px] bg-[#efe0ca]">
+      <div className=" grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2  w-full px-5 lg:px-20 2xl:px-60 py-[30px] bg-[#efe0ca]">
         <div className="w-[100%] pt-5">
           <div className="flex items-center mb-5 text-white">
             <span>
@@ -60,17 +60,29 @@ const HomePage = (props: Props) => {
             <div className="flex gap-4 mt-10">
               <button className="bg-[#001233] text-[#efe0ca] py-[0.3rem] px-[0.5rem] h-10 w-36 flex flex-row items-center  rounded-lg hover:bg-[#efe0ca] hover:text-[#001233] hover:border border-[#001233] text-xl font-semibold">
                 <BsLinkedin className=" h-6 w-8 mr-2" />
-                <span>LinkedIn</span>
+                <a
+                  href="https://www.linkedin.com/in/samuel-kirigha-2b25531a6/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  LinkedIn
+                </a>
               </button>
 
               <button className="bg-[#001233] text-[#efe0ca] py-[0.6rem] px-[0.5rem] h-10 w-36 flex flex-row items-center  rounded-lg hover:bg-[#efe0ca] hover:text-[#001233] hover:border border-[#001233] text-xl font-semibold">
                 <BsGithub className=" h-6 w-8 mr-2" />
-                <span>GitHub</span>
+                <a
+                  href="https://github.com/sammykirigha"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
               </button>
             </div>
           </div>
         </div>
-        <div className="h-80 md:h-auto lg:h-80 mt-10 md:mt-36 lg:mb-16 sm:flex sm:justify-center  ">
+        <div className="h-80 md:h-auto mt-10 lg:mt-36 lg:mb-16 sm:flex sm:justify-center  ">
           <Image
             src={image}
             alt="alt"
@@ -82,27 +94,27 @@ const HomePage = (props: Props) => {
       {/* section two competence */}
       <div className="bg-white pt-16 grid grid-cols-1 sm:grid-cols-2 lg:flex-row pb-10 items-center w-full px-5 lg:px-20 2xl:px-60">
         <div className="pr-3 ">
-          <h2 className="text-[2.1rem] text-[#001233] leading-[2.3rem] font-[500] mb-10">
+          <h2 className="text-[1.7rem] lg:text-[2.1rem] text-[#001233] leading-[2.3rem] font-[500] mb-10">
             Competence and know how
           </h2>
           <div className="flex flex-col gap-y-4">
-            <span className="text-slate-600 text-[1.2rem] sm:text-[1.1rem] font-[400]">
+            <span className="text-dark text-[1rem] lg:text-[1.2rem]  font-[400]">
               <strong className="text-[#001233] ">+3yrs</strong> I design
               beautiful user interfaces by myself using specific tactics
               explained from a developers point-of-view.
             </span>
-            <span className="text-slate-600 text-[1.2rem] sm:text-[1.1rem] font-[400]">
+            <span className="text-dark ttext-[1rem] lg:text-[1.2rem] font-[400]">
               {" "}
               <strong className="text-[#001233]">+3yrs</strong> Design and build
               web applications using ReactJs, Typescript, NodeJs (MERN), etc.
             </span>
-            <span className="text-slate-600 text-[1.2rem] sm:text-[1.1rem] font-[400]">
+            <span className="text-dark ttext-[1rem] lg:text-[1.2rem] font-[400]">
               <strong className="text-[#001233]">+2yrs</strong> professional
               experience working with React, GraphQl, NodeJs, Typescript, and
               MSSQL, and Postgres.
             </span>
           </div>
-          <p className="text-slate-600 text-[1.2rem] font-[400] mt-5 sm:text-[1.1rem]">
+          <p className="text-slate-600 text-[1rem] lg:text-[1.2rem] font-[400] mt-5 ">
             Currently am working on the project using React, C#, and Rainfocus
             platform to events, meeting, and confrences virtual platforms.
           </p>
@@ -119,7 +131,7 @@ const HomePage = (props: Props) => {
             </span>
             <MdCallMade className="text-[#001233] text-3xl" />
           </div>
-          <p className="mx-5 mt-5 text-[1.2rem] sm:text-[1.1rem] text-[#001233]">
+          <p className="mx-5 mt-5 text-[1rem] lg:text-[1.2rem] text-[#001233]">
             Let us connect through WhatsApp and make arrangement for farther
             communication about any role or project you have.
           </p>
@@ -127,11 +139,11 @@ const HomePage = (props: Props) => {
             <h2 className="text-[1.5rem] leading-3 font-[700] mt-5">
               Schedule a meeting
             </h2>
-            <p className="my-2 text-[#001233] pt-2 text-[1.2rem] sm:text-[1.1rem]">
+            <p className="my-2 text-[#001233] pt-2 text-[1rem] lg:text-[1.2rem]">
               Choose the ideal moment and meet with the team to put your ideas
               in action
             </p>
-            <button className="mt-10 bg-[#001233] text-[#efe0ca] h-auto rounded-full  px-4 py-2 font-[600] mb-5 hover:bg-[#efe0ca]  hover:text-[#001233] hover:font-[700]   ">
+            <button className="mt-10 bg-[#001233] text-[#efe0ca] h-auto rounded-full  px-4 py-2 font-[600] mb-5 hover:bg-[#efe0ca]  hover:text-[#001233]   ">
               CLICK TO COORDINATE A MEETING
             </button>
           </div>
