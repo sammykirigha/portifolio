@@ -42,14 +42,14 @@ const Navbar = (props: Props) => {
             </Link>
             <Link
               onClick={() => setShowNavItems(false)}
-              href="/services"
+              href="/Services"
               className="lg:ml-10 mt-4 lg:mt-0 !text-[#efe0ca] hover:underline cursor-pointer text-xl font-medium tracking-wide"
             >
               Services
             </Link>
             <Link
               onClick={() => setShowNavItems(false)}
-              href="/blogs"
+              href="/Blogs"
               className="lg:ml-10 mt-4 lg:mt-0 !text-[#efe0ca] hover:underline cursor-pointer text-xl font-medium tracking-wide"
             >
               Blogs

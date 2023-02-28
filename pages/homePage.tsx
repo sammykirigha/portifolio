@@ -336,46 +336,63 @@ const HomePage = (props: Props) => {
             className="rounded-full"
           />
         </div>
-        <div className="mt-10 flex flex-col items-center max-w-[600px]">
-          <div className="flex text-[1rem] text-center text-center max-w-[600px] justify-center">
-            <span className="whitespace-nowrap">Key Skills:</span>
-            <div className="flex flex-col gap-6">
-              <div>
-                {[
-                  "Nodejs",
-                  "React",
-                  "TypeScript",
-                  "Next",
-                  "Express",
-                  "Tailwind",
-                ].map((item, index) => {
-                  return (
-                    <span
-                      key={index}
-                      className="w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] "
-                    >
-                      {item}
-                    </span>
-                  );
-                })}
+        <div className="mt-10 flex flex-col items-center">
+          <div className="flex flex-col  text-center text-center w-[100%] justify-center">
+            <span className="whitespace-nowrap font-[700] text-1.3rem] mb-3">
+              Key Skills:
+            </span>
+            <div className="flex flex-col items-center gap-6">
+              <div className=" flex flex-col lg:flex-row gap-5 items-center">
+                <div className="flex">
+                  <div className=" w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
+                    Nodejs
+                  </div>
+                  <div className=" w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
+                    React
+                  </div>
+                  <div className=" w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
+                    TypeScript
+                  </div>
+                  <div className="lg:hidden w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
+                    AWS
+                  </div>
+                </div>
+
+                <div className="flex items-center mx-auto">
+                  <div className=" w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
+                    Next
+                  </div>
+                  <div className=" w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
+                    Express
+                  </div>
+                  <div className=" w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
+                    Tailwind
+                  </div>
+                  <div className="lg:hidden w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
+                    PostgreSQL
+                  </div>
+                </div>
               </div>
-              <div className="">
-                {["PostgreSQL", "Docker", "HTML5", "CSS3", "AWS"].map(
-                  (item, index) => {
-                    return (
-                      <span
-                        key={index}
-                        className="w-fit  text-[0.9rem] text-center ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] "
-                      >
-                        {item}
-                      </span>
-                    );
-                  }
-                )}
+              <div className="flex">
+                <div className=" w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
+                  Docker
+                </div>
+                <div className=" w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
+                  HTML5
+                </div>
+                <div className=" w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
+                  CSS3
+                </div>
+                <div className="hidden lg:block w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
+                  AWS
+                </div>
+                <div className="hidden lg:block w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
+                  PostgreSQL
+                </div>
               </div>
             </div>
           </div>
-          <div className="mt-16 flex gap-4">
+          <div className="mt-16 flex flex-col md:flex-row gap-4">
             <button className="bg-[#ff595a] w-fit rounded-full px-3 font-[700] py-2 text-[#001233] text-[#001233]">
               Contact Me Via Email
             </button>
@@ -388,14 +405,14 @@ const HomePage = (props: Props) => {
 
       {/* section seven */}
       <div className="h-auto bg-white mt-10 px-5 lg:px-20 2xl:px-60 pt-10 flex items-center justify-center">
-        <div className=" bg-[#efe0ca] mb-8 flex flex-col items-center justify-center h-72 w-[750px] rounded-lg">
-          <h1 className="text-[#001233] text-[2.5rem] font-[700] mt-8">
+        <div className=" bg-[#efe0ca] mb-8 flex flex-col items-center justify-center h-full w-[750px] rounded-lg">
+          <h1 className="text-[#001233] text-[1.7rem] md:text-[2.5rem] text-center font-[700] mt-8">
             We can Work Together
           </h1>
-          <p className="text-[1.5rem] text-[#001233] font-[500] mt-10">
+          <p className="text-[1.2rem] md:text-[1.5rem] text-center text-[#001233] font-[500] mt-10">
             Want to get your project done? Ready to deliver your expectation
           </p>
-          <button className="mt-10 bg-[#efe0ca] border border-[#001233] text-[#001233] font-[600] hover:bg-[#001233] hover:text-[#efe0ca] py-2 px-5 rounded-full hover:tracking-widest text-lg hover:bg-opacity-90 transition-all duration-150 ease-linear  ">
+          <button className="my-8 bg-[#efe0ca] border border-[#001233] text-[#001233] font-[600] hover:bg-[#001233] hover:text-[#efe0ca] py-2 px-5 rounded-full hover:tracking-widest text-lg hover:bg-opacity-90 transition-all duration-150 ease-linear  ">
             Get In Touch
           </button>
         </div>

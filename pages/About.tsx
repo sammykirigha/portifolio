@@ -13,7 +13,7 @@ const About = (props: Props) => {
           About Samuel,{" "}
         </h1>
         <h1 className="text-dark text-[1.6rem] font-[700] opacity-60">
-          Am a FullStack developer, devops Engineer, mentor & public speaker
+          Am a FullStack Developer, Devops Engineer, mentor & public speaker
         </h1>
         <p className="text-[1.2rem] leading-[1.7rem] tracking-wide font-[400] mt-2">
           I love writing clean, simple, and testable code
