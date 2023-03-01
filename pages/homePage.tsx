@@ -14,9 +14,6 @@ type Props = {};
 const HomePage = (props: Props) => {
   const onDownloadCv = () => {
     fetch("/myResume.pdf").then((response) => {
-      console.log("====================================");
-      console.log(response);
-      console.log("====================================");
       response.blob().then((blob) => {
         const fileURL = window.URL.createObjectURL(blob);
         let alink = document.createElement("a");
