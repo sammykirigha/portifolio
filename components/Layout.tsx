@@ -10,7 +10,7 @@ type Props = {
 const Layout = (props: Props) => {
   const { children } = props;
   return (
-    <div className="container">
+    <div className="">
       <Meta />
       <Navbar />
       <div>
