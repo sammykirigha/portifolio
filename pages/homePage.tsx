@@ -3,11 +3,10 @@ import Image from "next/image";
 import image from "../public/image.png";
 import dashboard from "../public/assets/lottery-app.png";
 import profile from "../public/assets/profile.jpg";
-import logo from "../public/logo.png";
-import comp from "../public/assets/computer2.jpg";
-import comp2 from "../public/assets/computer-image-2.jpg";
-import { MdLocationOn, MdCallMade } from "react-icons/md";
-import { BsLinkedin, BsGithub, BsWhatsapp } from "react-icons/bs";
+import { TbBrandReactNative } from "react-icons/tb";
+import { MdLocationOn, MdComputer } from "react-icons/md";
+import { BsLinkedin, BsGithub } from "react-icons/bs";
+import { FaReact } from "react-icons/fa";
 import { BiUpload } from "react-icons/bi";
 import { langs } from "../utils/language";
 import { FaRegLightbulb, FaDownload } from "react-icons/fa";
@@ -95,41 +94,80 @@ const HomePage = (props: Props) => {
       <div className="bg-[#001233]/95 py-10  px-5 lg:px-20 2xl:px-60">
         <div className="pr-3 ">
           <div className="flex flex-col items-center justify-center pt-10">
-            <h1 className="text-[#efe0ca] uppercase text-[1.7rem] tracking-[0.17em] font-[700]">
+            <h1 className="text-white uppercase text-[1.7rem] tracking-[0.17em] font-[800]">
               My Expertise
             </h1>
             <div className="flex mt-5 gap-4">
-              <div className="border border-[#efe0ca] h- max-h-[250px] w-full max-w-md p-3 rounded-md">
+              <div className="border border-[#efe0ca] max-h-[250px] w-full max-w-md p-3 rounded-md">
                 <div className=" flex gap-5 p-4">
-                  <Image
-                    src={comp}
-                    width="100"
-                    height="100"
-                    alt="aws comp"
-                    className="h-[70px] w-auto opacity-60 group-hover:opacity-60 rounded-lg"
-                  />
+                  <span>
+                    <MdComputer className="text-6xl text-white/90 " />
+                  </span>
                   <div className=" flex flex-col">
-                    <span className=" text-[#efe0ca] leading-[20px] text-[25px] font-[900]">
+                    <span className=" text-white/90 leading-[20px] text-[25px] font-[900]">
                       Software
                     </span>
-                    <span className=" text-[#efe0ca] text-[25px] font-[900]">
+                    <span className=" text-white/90 text-[25px] font-[900]">
                       Development
                     </span>
                   </div>
                 </div>
                 <div className=" px-10 relative">
-                  <div className="before:content-['<h3>'] text-[#efe0ca]/75"></div>
-                  <p className="text-[#efe0ca] text-[18px] pl-7">
-                    Experienced in both functional and OOP: ASP.NET, C#
+                  <div className="before:content-['<h3>'] text-[#efe0ca]/50"></div>
+                  <p className="text-white/90 text-[18px] pl-7 font-serif">
+                    Experienced in both functional and OOP: ASP.NET, C#, 
                     JavaScript, TypeScript.
                   </p>
-                  <div className="after:content-['<h3>'] text-[#efe0ca]/75"></div>
-                  <div className=" absolute left-14 top-4 after:content-[''] bg-[#efe0ca]/95 my-2 h-[65%] w-[1.5px]"></div>
-
+                  <div className="after:content-['<h3>'] text-[#efe0ca]/50"></div>
+                  <div className=" absolute left-14 top-4 after:content-[''] bg-[#efe0ca]/50 my-2 h-[65%] w-[2px]"></div>
                 </div>
               </div>
-              <div className="border border-[#efe0ca] h-52 h-54 w-60"></div>
-              <div className="border border-[#efe0ca] h-52 h-54 w-60"></div>
+              <div className="border border-[#efe0ca] max-h-[250px] w-full max-w-md p-3 rounded-md">
+                <div className=" flex gap-5 p-4">
+                  <span>
+                    <FaReact className="text-6xl text-white " />
+                  </span>
+                  <div className=" flex flex-col">
+                    <span className=" text-white/90 leading-[20px] text-[25px] font-[900]">
+                      FrontEnd
+                    </span>
+                    <span className=" text-white/90 text-[25px] font-[900]">
+                      React, NextJs
+                    </span>
+                  </div>
+                </div>
+                <div className=" px-10 relative">
+                  <div className="before:content-['<h3>'] text-[#efe0ca]/50"></div>
+                  <p className="text-white/90 text-[18px] pl-7 font-serif">
+                  Passionate about UI/UX. Over 2 years of development experience in HTML, CSS, JS, React and NextJS frameworks
+                  </p>
+                  <div className="after:content-['<h3>'] text-[#efe0ca]/50"></div>
+                  <div className=" absolute left-14 top-4 after:content-[''] bg-[#efe0ca]/50 my-2 h-[65%] w-[2px]"></div>
+                </div>
+              </div>
+              <div className="border border-[#efe0ca] max-h-[250px] w-full max-w-md p-3 rounded-md">
+                <div className=" flex gap-5 p-4">
+                  <span>
+                    <TbBrandReactNative className="text-6xl text-white " />
+                  </span>
+                  <div className=" flex flex-col">
+                    <span className=" text-white/90 leading-[20px] text-[25px] font-[900]">
+                      Mobile
+                    </span>
+                    <span className=" text-white/90 text-[25px] font-[900]">
+                      Development
+                    </span>
+                  </div>
+                </div>
+                <div className=" px-10 relative">
+                  <div className="before:content-['<h3>'] text-[#efe0ca]/50"></div>
+                  <p className="text-white/90 text-[18px] pl-7 font-serif">
+                  Skilled in developing hybrid mobile apps and cross-platform solutions using the React Native framework.
+                  </p>
+                  <div className="after:content-['<h3>'] text-[#efe0ca]/50"></div>
+                  <div className=" absolute left-14 top-4 after:content-[''] bg-[#efe0ca]/50 my-2 h-[65%] w-[2px]"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
