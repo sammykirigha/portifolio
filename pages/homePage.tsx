@@ -3,6 +3,9 @@ import Image from "next/image";
 import image from "../public/image.png";
 import dashboard from "../public/assets/lottery-app.png";
 import profile from "../public/assets/profile.jpg";
+import logo from "../public/logo.png";
+import comp from "../public/assets/computer2.jpg";
+import comp2 from "../public/assets/computer-image-2.jpg";
 import { MdLocationOn, MdCallMade } from "react-icons/md";
 import { BsLinkedin, BsGithub, BsWhatsapp } from "react-icons/bs";
 import { BiUpload } from "react-icons/bi";
@@ -42,11 +45,11 @@ const HomePage = (props: Props) => {
               Samuel Kirigha.
             </h2>
             <span className="text-[#001233]  font-bold text-xl sm:text-2xl">
-              Junior Software Developer
+              Mid-Level Software Engineer
             </span>
             <p className="text-[#001233] font-[500]  text-[1.2rem] mt-6 leading-[1.7rem] pr-0 md:pr-5">
-              I became a software developer because I knew that development was
-              a road to the future that I wanted to be a part of. I am given
+              I became a software engineer because I knew that development was a
+              road to the future that I wanted to be a part of. I am given
               challenges every day that I thrive on understanding and solving,
               and I have tackled projects for e-commerce, booking systems, etc.
               I am a perceptive, dedicated dreamer, and I enjoy using JavaScript
@@ -89,72 +92,59 @@ const HomePage = (props: Props) => {
       </div>
 
       {/* section two competence */}
-      <div className="bg-white pt-16 grid grid-cols-1 sm:grid-cols-2 lg:flex-row pb-10 items-center w-full px-5 lg:px-20 2xl:px-60">
+      <div className="bg-[#001233]/95 py-10  px-5 lg:px-20 2xl:px-60">
         <div className="pr-3 ">
-          <h2 className="text-[1.7rem] lg:text-[2.1rem] text-[#001233] leading-[2.3rem] font-[500] mb-10">
-            Competence and know how
-          </h2>
-          <div className="flex flex-col gap-y-4">
-            <span className="text-dark text-[1rem] lg:text-[1.2rem]  font-[400]">
-              <strong className="text-[#001233] ">+3yrs</strong> I design
-              beautiful user interfaces by myself using specific tactics
-              explained from a developers point-of-view.
-            </span>
-            <span className="text-dark ttext-[1rem] lg:text-[1.2rem] font-[400]">
-              {" "}
-              <strong className="text-[#001233]">+3yrs</strong> Design and build
-              web applications using ReactJs, Typescript, NodeJs (MERN), etc.
-            </span>
-            <span className="text-dark ttext-[1rem] lg:text-[1.2rem] font-[400]">
-              <strong className="text-[#001233]">+2yrs</strong> professional
-              experience working with React, GraphQl, NodeJs, Typescript, and
-              MSSQL, and Postgres.
-            </span>
-          </div>
-          <p className="text-slate-600 text-[1rem] lg:text-[1.2rem] font-[400] mt-5 ">
-            Currently am working on the project using React, C#, and Rainfocus
-            platform to events, meeting, and confrences virtual platforms.
-          </p>
-          <button className="mt-3 bg-[#001233] text-[#efe0ca] h-10 rounded-full px-4 font-[600] mb-5 hover:bg-[#efe0ca]  hover:text-[#001233] hover:font-[700]  ">
-            View Current
-          </button>
-        </div>
+          <div className="flex flex-col items-center justify-center pt-10">
+            <h1 className="text-[#efe0ca] uppercase text-[1.7rem] tracking-[0.17em] font-[700]">
+              My Expertise
+            </h1>
+            <div className="flex mt-5 gap-4">
+              <div className="border border-[#efe0ca] h- max-h-[250px] w-full max-w-md p-3 rounded-md">
+                <div className=" flex gap-5 p-4">
+                  <Image
+                    src={comp}
+                    width="100"
+                    height="100"
+                    alt="aws comp"
+                    className="h-[70px] w-auto opacity-60 group-hover:opacity-60 rounded-lg"
+                  />
+                  <div className=" flex flex-col">
+                    <span className=" text-[#efe0ca] leading-[20px] text-[25px] font-[900]">
+                      Software
+                    </span>
+                    <span className=" text-[#efe0ca] text-[25px] font-[900]">
+                      Development
+                    </span>
+                  </div>
+                </div>
+                <div className=" px-10 relative">
+                  <div className="before:content-['<h3>'] text-[#efe0ca]/75"></div>
+                  <p className="text-[#efe0ca] text-[18px] pl-7">
+                    Experienced in both functional and OOP: ASP.NET, C#
+                    JavaScript, TypeScript.
+                  </p>
+                  <div className="after:content-['<h3>'] text-[#efe0ca]/75"></div>
+                  <div className=" absolute left-14 top-4 after:content-[''] bg-[#efe0ca]/95 my-2 h-[65%] w-[1.5px]"></div>
 
-        <div className="bg-white py-2  rounded-lg shadow shadow-2x mb-10">
-          <div className="bg-[#efe0ca] border border-[#001233] border-[1px] mx-5 rounded-lg flex flex-row h-[4rem] px-5 items-center justify-between cursor-pointer">
-            <BsWhatsapp className="text-[#001233] text-3xl mt-1" />
-            <span className="text-[#001233] text-xl sm:text-2xl md:text-3xl font-[600]">
-              0707256013
-            </span>
-            <MdCallMade className="text-[#001233] text-3xl" />
-          </div>
-          <p className="mx-5 mt-5 text-[1rem] lg:text-[1.2rem] text-[#001233]">
-            Let us connect through WhatsApp and make arrangement for farther
-            communication about any role or project you have.
-          </p>
-          <div className="mx-5 px-3 mt-24 bg-white border border-gray-100 shadow-inner ">
-            <h2 className="text-[1.5rem] leading-3 font-[700] mt-5">
-              Schedule a meeting
-            </h2>
-            <p className="my-2 text-[#001233] pt-2 text-[1rem] lg:text-[1.2rem]">
-              Choose the ideal moment and meet with the team to put your ideas
-              in action
-            </p>
-            <button className="mt-10 bg-[#001233] text-[#efe0ca] h-auto rounded-full  px-4 py-2 font-[600] mb-5 hover:bg-[#efe0ca]  hover:text-[#001233]   ">
-              CLICK TO COORDINATE A MEETING
-            </button>
+                </div>
+              </div>
+              <div className="border border-[#efe0ca] h-52 h-54 w-60"></div>
+              <div className="border border-[#efe0ca] h-52 h-54 w-60"></div>
+            </div>
           </div>
         </div>
       </div>
 
+      <div className=" h-1 w-1 bg-[#efe0ca]"></div>
+
       {/* section three */}
       <div className="h-auto bg-bg-image">
-        <div className=" bg-[#001233]/95 py-10  px-5 lg:px-20 2xl:px-60">
+        <div className="py-10  px-5 lg:px-20 2xl:px-60">
           <div className="flex flex-col items-center justify-center pt-10">
-            <h1 className="text-[#efe0ca] uppercase text-[1.7rem] tracking-[0.17em] font-[700]">
+            <h1 className="text-[#001233]/95 uppercase text-[1.7rem] tracking-[0.17em] font-[700]">
               Tools
             </h1>
-            <h3 className="pt-5 text-[#efe0ca] text-[1.4rem] tracking-[0.15em] text-center leading-[2.3rem]">
+            <h3 className="pt-5 text-[#001233]/95text-[1.4rem] tracking-[0.15em] text-center leading-[2.3rem]">
               Programming Languages and tools
             </h3>
           </div>
@@ -172,7 +162,7 @@ const HomePage = (props: Props) => {
                     alt="aws logo"
                     className="h-[70px] w-auto mt-2 opacity-60 group-hover:opacity-60 rounded-lg"
                   />
-                  <span className="py-3 text-[#efe0ca] text-[1.1rem] group-hover:text-[#001233] font-[500]">
+                  <span className="py-3 text-[#001233]/95 text-[1.1rem] group-hover:text-[#001233] font-[500]">
                     {lang.name}
                   </span>
                 </li>
