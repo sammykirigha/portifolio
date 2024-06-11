@@ -3,6 +3,7 @@ import Image from "next/image";
 import image from "../public/image.png";
 import dashboard from "../public/assets/lottery-app.png";
 import profile from "../public/assets/profile.jpg";
+import bg from "../public/assets/bg-22.avif";
 import { TbBrandReactNative } from "react-icons/tb";
 import { MdLocationOn, MdComputer } from "react-icons/md";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
@@ -29,64 +30,57 @@ const HomePage = (props: Props) => {
   return (
     <div className="">
       {/* introduction */}
-      <div className=" grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2  w-full px-5 lg:px-20 2xl:px-60 py-[30px] bg-[#efe0ca]">
-        <div className="w-[100%] pt-5">
-          <div className="flex items-center mb-5 text-white">
-            <span>
-              <MdLocationOn className="text-4xl text-[#001233] " />
-            </span>
-            <span className="font-[700] text-[#001233] text-4xl">
-              Nyeri, Kenya
-            </span>
-          </div>
-          <div className="px-3">
-            <h2 className="text-[#001233]  font-bold text-3xl sm:text-4xl mb-3">
-              Samuel Kirigha.
-            </h2>
-            <span className="text-[#001233]  font-bold text-xl sm:text-2xl">
-              Mid-Level Software Engineer
-            </span>
-            <p className="text-[#001233] font-[500]  text-[1.2rem] mt-6 leading-[1.7rem] pr-0 md:pr-5">
-              I became a software engineer because I knew that development was a
-              road to the future that I wanted to be a part of. I am given
-              challenges every day that I thrive on understanding and solving,
-              and I have tackled projects for e-commerce, booking systems, etc.
-              I am a perceptive, dedicated dreamer, and I enjoy using JavaScript
-              for its ease of use and verstatility. I love listening to music,
-              watching movies, and playing videogames, and watching soccer a big
-              fun of manchester united.
-            </p>
-            <div className="flex gap-4 mt-10">
-              <button className="bg-[#001233] text-[#efe0ca] py-[0.3rem] px-[0.5rem] h-10 w-36 flex flex-row items-center  rounded-lg hover:bg-[#efe0ca] hover:text-[#001233] hover:border border-[#001233] text-xl font-semibold">
-                <BsLinkedin className=" h-6 w-8 mr-2" />
-                <a
-                  href="https://www.linkedin.com/in/samuel-kirigha-2b25531a6/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  LinkedIn
-                </a>
-              </button>
+      <div className="py-40 relative px-5 lg:px-20 2xl:px-60 bg-[url('../public/assets/bg-22.avif')] bg-no-repeat bg-center bg-cover">
+        <div className="flex">
+          <div className="w-full mx-auto ">
+            <div className="flex items-center mb-5 text-white">
+              <span>
+                <MdLocationOn className="text-4xl text-[#efe0ca] " />
+              </span>
+              <span className="font-[700] text-[#efe0ca] text-4xl">
+                Nyeri, Kenya
+              </span>
+            </div>
+           
+            <div className="px-3">
+              <h2 className="text-[#efe0ca]  font-bold text-3xl sm:text-4xl mb-3">
+                Samuel Kirigha.
+              </h2>
+              <span className="text-[#efe0ca]  font-bold text-xl sm:text-2xl">
+                Mid-Level Software Engineer
+              </span>
+              <div className="flex gap-4 mt-10">
+                <button className="bg-[#001233] text-[#efe0ca] py-[0.3rem] px-[0.5rem] h-10 w-36 flex flex-row items-center  rounded-lg hover:bg-[#efe0ca] hover:text-[#001233] hover:border border-[#001233] text-xl font-semibold">
+                  <BsLinkedin className=" h-6 w-8 mr-2" />
+                  <a
+                    href="https://www.linkedin.com/in/samuel-kirigha-2b25531a6/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    LinkedIn
+                  </a>
+                </button>
 
-              <button className="bg-[#001233] text-[#efe0ca] py-[0.6rem] px-[0.5rem] h-10 w-36 flex flex-row items-center  rounded-lg hover:bg-[#efe0ca] hover:text-[#001233] hover:border border-[#001233] text-xl font-semibold">
-                <BsGithub className=" h-6 w-8 mr-2" />
-                <a
-                  href="https://github.com/sammykirigha"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub
-                </a>
-              </button>
+                <button className="bg-[#001233] text-[#efe0ca] py-[0.6rem] px-[0.5rem] h-10 w-36 flex flex-row items-center  rounded-lg hover:bg-[#efe0ca] hover:text-[#001233] hover:border border-[#001233] text-xl font-semibold">
+                  <BsGithub className=" h-6 w-8 mr-2" />
+                  <a
+                    href="https://github.com/sammykirigha"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="h-80 md:h-auto mt-10 lg:mt-36 lg:mb-16 sm:flex sm:justify-center  ">
-          <Image
-            src={image}
-            alt="alt"
-            className="h-[100%] md:w-[100%] lg:w-[80%]  fill-indigo-700 rounded-lg bg-indigo-600 shadow-2xl"
-          />
+
+           {/*  */}
+          <div className=" mx-auto max-w-md mt-28">
+            <p className="text-white font-[500]  text-[1.5rem] mt-6 leading-[1.7rem] pr-0 md:pr-5">
+            I build pixel-perfect, engaging, and accessible digital experiences.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -115,7 +109,7 @@ const HomePage = (props: Props) => {
                 <div className=" px-10 relative">
                   <div className="before:content-['<h3>'] text-[#efe0ca]/50"></div>
                   <p className="text-white/90 text-[18px] pl-7 font-serif">
-                    Experienced in both functional and OOP: ASP.NET, C#, 
+                    Experienced in both functional and OOP: ASP.NET, C#,
                     JavaScript, TypeScript.
                   </p>
                   <div className="after:content-['<h3>'] text-[#efe0ca]/50"></div>
@@ -139,7 +133,8 @@ const HomePage = (props: Props) => {
                 <div className=" px-10 relative">
                   <div className="before:content-['<h3>'] text-[#efe0ca]/50"></div>
                   <p className="text-white/90 text-[18px] pl-7 font-serif">
-                  Passionate about UI/UX. Over 2 years of development experience in HTML, CSS, JS, React and NextJS frameworks
+                    Passionate about UI/UX. Over 2 years of development
+                    experience in HTML, CSS, JS, React and NextJS frameworks
                   </p>
                   <div className="after:content-['<h3>'] text-[#efe0ca]/50"></div>
                   <div className=" absolute left-14 top-4 after:content-[''] bg-[#efe0ca]/50 my-2 h-[65%] w-[2px]"></div>
@@ -162,7 +157,8 @@ const HomePage = (props: Props) => {
                 <div className=" px-10 relative">
                   <div className="before:content-['<h3>'] text-[#efe0ca]/50"></div>
                   <p className="text-white/90 text-[18px] pl-7 font-serif">
-                  Skilled in developing hybrid mobile apps and cross-platform solutions using the React Native framework.
+                    Skilled in developing hybrid mobile apps and cross-platform
+                    solutions using the React Native framework.
                   </p>
                   <div className="after:content-['<h3>'] text-[#efe0ca]/50"></div>
                   <div className=" absolute left-14 top-4 after:content-[''] bg-[#efe0ca]/50 my-2 h-[65%] w-[2px]"></div>
