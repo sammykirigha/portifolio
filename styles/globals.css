@@ -25,6 +25,17 @@ a {
   }
 }
 
+.fade-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, transparent, transparent 0%, #001233 100%);
+  pointer-events: none;
+}
+
 /* 
 main color #001233
 nav items and border color for some buttons color #efe0ca

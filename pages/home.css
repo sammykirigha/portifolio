@@ -1,0 +1,21 @@
+/* <div className="mt-10 lg:mt-16 ">
+<ul className="flex flex-wrap  max-w-7xl mx-auto my-10 gap-10 items-center justify-center">
+  {langs?.map((lang) => (
+    <li
+      key={lang.id}
+      className=" flex flex-col w-[120px] transition-all duration-150 items-center rounded-lg px-2 hover:bg-[#efe0ca] group cursor-pointer"
+    >
+      <Image
+        src={lang.icon}
+        width="100"
+        height="100"
+        alt="aws logo"
+        className="h-[70px] w-auto mt-2 opacity-60 group-hover:opacity-60 rounded-lg"
+      />
+      <span className="py-3 text-[#001233]/95 text-[1.1rem] group-hover:text-[#001233] font-[500]">
+        {lang.name}
+      </span>
+    </li>
+  ))}
+</ul>
+</div> */

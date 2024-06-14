@@ -11,6 +11,7 @@ import { FaReact } from "react-icons/fa";
 import { BiUpload } from "react-icons/bi";
 import { langs } from "../utils/language";
 import { FaRegLightbulb, FaDownload } from "react-icons/fa";
+import { FaArrowAltCircleDown } from "react-icons/fa";
 
 type Props = {};
 
@@ -28,70 +29,39 @@ const HomePage = (props: Props) => {
   };
 
   return (
-    <div className="">
-      {/* introduction */}
-      <div className="py-40 relative px-5 lg:px-20 2xl:px-60 bg-[url('../public/assets/bg-22.avif')] bg-no-repeat bg-center bg-cover">
-        <div className="flex">
-          <div className="w-full mx-auto ">
-            <div className="flex items-center mb-5 text-white">
-              <span>
-                <MdLocationOn className="text-4xl text-[#efe0ca] " />
-              </span>
-              <span className="font-[700] text-[#efe0ca] text-4xl">
-                Nyeri, Kenya
-              </span>
-            </div>
-           
-            <div className="px-3">
-              <h2 className="text-[#efe0ca]  font-bold text-3xl sm:text-4xl mb-3">
-                Samuel Kirigha.
-              </h2>
-              <span className="text-[#efe0ca]  font-bold text-xl sm:text-2xl">
-                Mid-Level Software Engineer
-              </span>
-              <div className="flex gap-4 mt-10">
-                <button className="bg-[#001233] text-[#efe0ca] py-[0.3rem] px-[0.5rem] h-10 w-36 flex flex-row items-center  rounded-lg hover:bg-[#efe0ca] hover:text-[#001233] hover:border border-[#001233] text-xl font-semibold">
-                  <BsLinkedin className=" h-6 w-8 mr-2" />
-                  <a
-                    href="https://www.linkedin.com/in/samuel-kirigha-2b25531a6/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    LinkedIn
-                  </a>
-                </button>
-
-                <button className="bg-[#001233] text-[#efe0ca] py-[0.6rem] px-[0.5rem] h-10 w-36 flex flex-row items-center  rounded-lg hover:bg-[#efe0ca] hover:text-[#001233] hover:border border-[#001233] text-xl font-semibold">
-                  <BsGithub className=" h-6 w-8 mr-2" />
-                  <a
-                    href="https://github.com/sammykirigha"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    GitHub
-                  </a>
-                </button>
+    <div>
+      {/* introduction bg-[url('../public/assets/bg-22.avif')] bg-no-repeat bg-center bg-cover  */}
+      <div className="relative px-5 lg:px-20 2xl:px-60 bg-red-500 bg-[url('../public/assets/bg-22.avif')] h-[700px] bg-no-repeat bg-center bg-cover  ">
+        <div className=" w-full absolute top-[55%] -right-[0%]  ">
+          <div className="flex flex-col">
+            <div className=" w-full mx-auto  flex items-center justify-center">
+              <div className="px-3 w-full flex flex-col items-center justify-center">
+                <h2 className="text-white text-[105px] font-bold">
+                  Samuel Kirigha.
+                </h2>
+                <p className="text-white text-center items-center justify-center w-full  font-bold text-4xl">
+                  Software Engineer, And App Developer
+                </p>
               </div>
             </div>
-          </div>
 
-           {/*  */}
-          <div className=" mx-auto max-w-md mt-28">
-            <p className="text-white font-[500]  text-[1.5rem] mt-6 leading-[1.7rem] pr-0 md:pr-5">
-            I build pixel-perfect, engaging, and accessible digital experiences.
-            </p>
+            <div className="flex items-center justify-center my-10">
+              <span>
+                <FaArrowAltCircleDown className="text-6xl animate-bounce w-12 h-12 text-white" />
+              </span>
+            </div>
           </div>
         </div>
       </div>
 
       {/* section two competence */}
-      <div className="bg-[#001233]/95 py-10  px-5 lg:px-20 2xl:px-60">
+      <div className="bg-[#001233]/95 pt-10 pb-2  px-5 lg:px-20 2xl:px-60">
         <div className="pr-3 ">
           <div className="flex flex-col items-center justify-center pt-10">
             <h1 className="text-white uppercase text-[1.7rem] tracking-[0.17em] font-[800]">
               My Expertise
             </h1>
-            <div className="flex mt-5 gap-4">
+            <div className="flex mt-10 gap-4">
               <div className="border border-[#efe0ca] max-h-[250px] w-full max-w-md p-3 rounded-md">
                 <div className=" flex gap-5 p-4">
                   <span>
@@ -167,107 +137,25 @@ const HomePage = (props: Props) => {
             </div>
           </div>
         </div>
+        <div className=" relative w-[50vw] shadow-inner inset-2 opacity-10 border border-none mx-auto bg-[url('../public/code-22.jpg')] h-[250px] bg-no-repeat bg-cover bg-center ">
+        <div className="absolute inset-0 fade-bg pointer-events-none"></div>
+        </div>
       </div>
 
-      <div className=" h-1 w-1 bg-[#efe0ca]"></div>
-
       {/* section three */}
-      <div className="h-auto bg-bg-image">
-        <div className="py-10  px-5 lg:px-20 2xl:px-60">
-          <div className="flex flex-col items-center justify-center pt-10">
-            <h1 className="text-[#001233]/95 uppercase text-[1.7rem] tracking-[0.17em] font-[700]">
+      <div className="h-auto bg-[#001233]/95">
+        <div className=" px-5 lg:px-20 2xl:px-60">
+          <div className="flex flex-col items-center justify-center">
+            <h1 className="text-white uppercase text-[50px] tracking-[0.17em] font-[700]">
               Tools
             </h1>
             <h3 className="pt-5 text-[#001233]/95text-[1.4rem] tracking-[0.15em] text-center leading-[2.3rem]">
               Programming Languages and tools
             </h3>
           </div>
-          <div className="mt-10 lg:mt-16 ">
-            <ul className="flex flex-wrap  max-w-7xl mx-auto my-10 gap-10 items-center justify-center">
-              {langs?.map((lang) => (
-                <li
-                  key={lang.id}
-                  className=" flex flex-col w-[120px] transition-all duration-150 items-center rounded-lg px-2 hover:bg-[#efe0ca] group cursor-pointer"
-                >
-                  <Image
-                    src={lang.icon}
-                    width="100"
-                    height="100"
-                    alt="aws logo"
-                    className="h-[70px] w-auto mt-2 opacity-60 group-hover:opacity-60 rounded-lg"
-                  />
-                  <span className="py-3 text-[#001233]/95 text-[1.1rem] group-hover:text-[#001233] font-[500]">
-                    {lang.name}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
+
         </div>
       </div>
-
-      {/* section four */}
-      <div className="h-auto bg-gray-200 px-5 lg:px-20 2xl:px-60 py-10">
-        <div className="flex items-center justify-center">
-          <h2 className="text-[#001233] text-[1.7rem] font-[700]">
-            The Services I Offer
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:flex-row xl:grid-cols-3 gap-3 ">
-          <div className="mt-10 bg-white pb-10 rounded-lg group hover:bg-[#efe0ca]">
-            <FaRegLightbulb className="h-12 w-[100px] mt-5 !text-[#001233] top-0" />
-            <div className="px-8 mt-6">
-              <p className="text-[#001233] text-[1.3rem] font-[600] group-hover:text-text-[#001233]">
-                Web Development
-              </p>
-              <p className="text-text-[#001233] mt-3 group-hover:text-text-[#001233]">
-                Converting your ideas into a website. Design Web application
-                that are responsive to different devices and scalable.
-              </p>
-            </div>
-            <div className="w-full mt-10 px-8">
-              <button className="font-[500] rounded-lg bg-[#ff595a] w-[100%] text-white h-[40px] group-hover:bg-[#ff595a] group-hover:text-[#001233]">
-                Find out
-              </button>
-            </div>
-          </div>
-          <div className="mt-10 bg-white pb-10 rounded-lg group hover:bg-[#efe0ca]">
-            <FaRegLightbulb className="h-12 w-[100px] mt-5 !text-[#001233] top-0" />
-            <div className="px-8 mt-6">
-              <p className="text-[#001233] text-[1.3rem] font-[600] group-hover:text-text-[#001233]">
-                Mobile Application Development
-              </p>
-              <p className="text-text-[#001233] mt-3 group-hover:text-text-[#001233]">
-                Design mobile application specifically for use on mobile devices
-                such as smartphones, tables, etc
-              </p>
-            </div>
-            <div className="w-full mt-10 px-8">
-              <button className="font-[500] rounded-lg bg-[#ff595a] w-[100%] text-white h-[40px] group-hover:bg-[#ff595a] group-hover:text-[#001233]">
-                Find out
-              </button>
-            </div>
-          </div>
-          <div className="mt-10 bg-white pb-10 rounded-lg group hover:bg-[#efe0ca]">
-            <FaRegLightbulb className="h-12 w-[100px] mt-5 !text-[#001233] top-0" />
-            <div className="px-8 mt-6">
-              <p className="text-[#001233] text-[1.3rem] font-[600] group-hover:text-text-[#001233]">
-                Mobile Application Development
-              </p>
-              <p className="text-text-[#001233] mt-3 group-hover:text-text-[#001233]">
-                Design mobile application specifically for use on mobile devices
-                such as smartphones, tables, etc
-              </p>
-            </div>
-            <div className="w-full mt-10 px-8">
-              <button className="font-[500] rounded-lg bg-[#ff595a] w-[100%] text-white h-[40px] group-hover:bg-[#ff595a] group-hover:text-[#001233]">
-                Find out
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* section five */}
       <div className="h-auto bg-white mt-10 px-5 lg:px-20 2xl:px-60 pt-10">
         <div className="flex items-center justify=center flex-col">
@@ -373,7 +261,7 @@ const HomePage = (props: Props) => {
       </div>
 
       {/* section six */}
-      <div className="h-auto bg-gray-200 mt-10 px-5 lg:px-20 2xl:px-60 py-10 flex flex-col items-center justify-center">
+      <div className="h-auto bg-gradient-to-t from-gray-200 mt-10 px-5 lg:px-20 2xl:px-60 py-10 flex flex-col items-center justify-center">
         <h1 className="text-[#001233] text-[2.7rem] font-[700]">About Me</h1>
         <div className="mt-5">
           <Image

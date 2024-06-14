@@ -11,15 +11,15 @@ const Navbar = (props: Props) => {
   const [showNavItems, setShowNavItems] = useState(false);
 
   return (
-    <div className=" bg-[#001233] group h-[100px] flex items-center sticky px-5 lg:px-20 2xl:px-60 top-0 left-0 right-0 w-full z-50 ">
+    <div className=" bg-[#001233] group h-[100px] flex items-center justify-center sticky px-5 lg:px-20 2xl:px-60 top-0 left-0 right-0 w-full z-50 ">
       <div className="w-full flex m-auto items-center justify-between space-x-8">
         <span className="flex flex-row items-center cursor-pointer">
           <FaRegLightbulb className="h-12 w-[100px] !text-[#efe0ca] top-0" />
-          <span className="text-[#ff595a] font-[800] text-[1.3rem]">
+          <span className="text-white font-[800] text-[1.3rem]">
             DevSam
           </span>
         </span>
-        <div className="container flex gap-4 relative items-center">
+        <div className="container justify-center flex gap-4 relative items-center">
           <div
             className={`
         absolute lg:static flex-col w-[200px] shadow-lg p-3 items-center lg:shadow-none lg:p-0 lg:w-auto transition-all duration-150 ease-linear lg:transition-none
