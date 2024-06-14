@@ -4,13 +4,23 @@ import image from "../public/image.png";
 import project from "../public/project.jpg";
 import dashboard from "../public/assets/lottery-app.png";
 import profile from "../public/assets/profile.jpg";
+import logo from "../public/griffin-logo.png";
 import { TbBrandReactNative } from "react-icons/tb";
 import { MdComputer } from "react-icons/md";
-import { FaReact } from "react-icons/fa";
+import { FaLocationArrow, FaReact } from "react-icons/fa";
 import { BiUpload } from "react-icons/bi";
 import { langs } from "../utils/language";
 import { FaRegLightbulb, FaDownload } from "react-icons/fa";
 import { FaArrowAltCircleDown } from "react-icons/fa";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../components/ui/Accordion";
+import { RiMapPinFill } from "react-icons/ri";
+import { BsArrowUpRightCircleFill, BsFillArrowUpRightCircleFill } from "react-icons/bs";
+
 
 type Props = {};
 
@@ -28,7 +38,7 @@ const HomePage = (props: Props) => {
   };
 
   return (
-    <div>
+    <div className="bg-[#001233]/95">
       {/* introduction bg-[url('../public/assets/bg-22.avif')] bg-no-repeat bg-center bg-cover  */}
       <div className="relative px-5 lg:px-20 2xl:px-60 bg-red-500 bg-[url('../public/assets/bg-22.avif')] h-[700px] bg-no-repeat bg-center bg-cover  ">
         <div className=" w-full absolute top-[55%] -right-[0%]  ">
@@ -142,7 +152,7 @@ const HomePage = (props: Props) => {
       </div>
 
       {/* section three */}
-      <div className="h-auto bg-[#001233]/95">
+      <div className="h-auto ">
         <div className=" px-5 lg:px-20 2xl:px-60">
           <div className="">
             <ul className=" flex items-center gap-5">
@@ -178,149 +188,317 @@ const HomePage = (props: Props) => {
             </ul>
           </div>
 
-          <div className=" mt-7 grid grid-cols-3 gap-10">
-            <div className="group cursor-pointer rounded-lg">
-              <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
-                <Image
-                  src={project}
-                  alt=""
-                  className=" rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
-                />
-              </div>
-              <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
-                <p className=" text-[22px] leading-[19px] font-[700] py-3 z-50">
-                  Flight Local Web App
-                </p>
-                <div className=" relative">
-                  <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
-                    Web Development
+          <div className=" mt-7">
+            <div className=" grid grid-cols-3 gap-16">
+              <div className="group cursor-pointer rounded-lg">
+                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
+                  <Image
+                    src={project}
+                    alt=""
+                    className=" rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
+                  />
+                </div>
+                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
+                  <p className=" text-[22px] leading-[19px] font-[700] py-3 z-50">
+                    Flight Local Web App
                   </p>
-                  <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
-                    View Project
-                  </span>
+                  <div className=" relative">
+                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
+                      Web Development
+                    </p>
+                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
+                      View Project
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className=" rounded-lg">
-              <Image
-                src={project}
-                alt=""
-                className=" rounded-lg boarder h-[300px] md:52"
-              />
-            </div>
-            <div className=" rounded-lg">
-              <Image
-                src={project}
-                alt=""
-                className=" rounded-lg boarder h-[300px] md:52"
-              />
+              <div className="group cursor-pointer rounded-lg">
+                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
+                  <Image
+                    src={project}
+                    alt=""
+                    className=" rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
+                  />
+                </div>
+                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
+                  <p className=" text-[22px] leading-[19px] font-[700] py-3 z-50">
+                    Flight Local Web App
+                  </p>
+                  <div className=" relative">
+                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
+                      Web Development
+                    </p>
+                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
+                      View Project
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="group cursor-pointer rounded-lg">
+                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
+                  <Image
+                    src={project}
+                    alt=""
+                    className=" rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
+                  />
+                </div>
+                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
+                  <p className=" text-[22px] leading-[19px] font-[700] py-3 z-50">
+                    Flight Local Web App
+                  </p>
+                  <div className=" relative">
+                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
+                      Web Development
+                    </p>
+                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
+                      View Project
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="h-fit  group cursor-pointer rounded-lg">
+                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
+                  <Image
+                    src={project}
+                    alt=""
+                    className=" rounded-t-lg boarder min-h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
+                  />
+                </div>
+                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
+                  <p className=" text-[22px] leading-[19px] font-[700] py-3 z-50">
+                    Flight Local Web App
+                  </p>
+                  <div className=" relative">
+                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
+                      Web Development
+                    </p>
+                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
+                      View Project
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="col-span-2 row-span-1 group cursor-pointer rounded-lg">
+                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
+                  <Image
+                    src={project}
+                    alt=""
+                    className=" rounded-t-lg boarder  transform transition duration-700 ease-in-out group-hover:scale-110"
+                  />
+                </div>
+                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
+                  <p className=" text-[22px] leading-[19px] font-[700] py-3 z-50">
+                    Flight Local Web App
+                  </p>
+                  <div className=" relative">
+                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
+                      Web Development
+                    </p>
+                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
+                      View Project
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="-mt-32 group cursor-pointer rounded-lg">
+                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
+                  <Image
+                    src={project}
+                    alt=""
+                    className=" rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
+                  />
+                </div>
+                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
+                  <p className=" text-[22px] leading-[19px] font-[700] py-3 z-50">
+                    Flight Local Web App
+                  </p>
+                  <div className=" relative">
+                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
+                      Web Development
+                    </p>
+                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
+                      View Project
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="group cursor-pointer rounded-lg">
+                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
+                  <Image
+                    src={project}
+                    alt=""
+                    className=" rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
+                  />
+                </div>
+                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
+                  <p className=" text-[22px] leading-[19px] font-[700] py-3 z-50">
+                    Flight Local Web App
+                  </p>
+                  <div className=" relative">
+                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
+                      Web Development
+                    </p>
+                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
+                      View Project
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="group cursor-pointer rounded-lg">
+                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
+                  <Image
+                    src={project}
+                    alt=""
+                    className=" rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
+                  />
+                </div>
+                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
+                  <p className=" text-[22px] leading-[19px] font-[700] py-3 z-50">
+                    Flight Local Web App
+                  </p>
+                  <div className=" relative">
+                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
+                      Web Development
+                    </p>
+                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
+                      View Project
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
       {/* section five */}
-      <div className="h-auto bg-[#001233]/95 px-5 lg:px-20 2xl:px-60 pt-10">
+      <div className="h-auto mt-10  px-5 lg:px-20 2xl:px-60 pt-10">
         <div className="flex items-center justify=center flex-col">
-          <h3 className="text-[#001233] text-[2rem] ">Featured projects</h3>
-          <h1 className="text-[#001233] font-[600] text-[2.2rem]">
-            What I Have Worked On
-          </h1>
+          <h1 className="text-white text-[3rem] leading-[2.5rem] font-[700] ">Professional</h1>
+          <h3 className="text-white text-[2.5rem] font-[700]">Experience </h3>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 mt-8 lg:flex-row xl:grid-cols-3 gap-3 ">
-          <div className="relative min-h-[225px] group bg-opacity-40 hover:bg-opacity-100 justify-center rounded-xl duration-150 ease-linear p-4 flex flex-col items-center">
-            <Image
-              src={dashboard}
-              alt=""
-              className=" rounded-lg boarder h-auto md:52 w-full"
-            />
-            <h4 className="mt-4 self-start text-[#001233]">
-              A dashboard for both admin and the normal user.
-            </h4>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                textDecoration: "none",
-              }}
-              className="bg-[#001233]/70 px-2 py-[3.5px] text-[#efe0ca] text-sm flex items-center gap-1.5 px-2 underline mt-2 text-accent self-start rounded-lg"
-            >
-              <BiUpload className=" h-4 w-4" /> see the app
-            </a>
-          </div>
+      <div className=" container max-w-[1024px]">
+        <Accordion type="single" collapsible>
+          <AccordionItem value="item-1" className=" border border-none">
+            <AccordionTrigger className="">
+              <div className=" text-white h-16 rounded-lg bg-[#430d79] w-full flex items-center justify-around ">
+                <h3 className=" text-[20px]">Mid-Level Software Engineer @ Global Griffin Tech </h3>
+                <h3>2023 - Present</h3>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className=" mr-5 " >
+              <div className=" bg-[#241d41] rounded-lg px-6 py-7">
+                <div className=" flex gap-5 items-center">
+                  <div className=" flex gap-3 items-center ">
+                    <RiMapPinFill className=" text-white h-4 w-4" />
+                    <p className="text-white">Nyeri, Kenya</p>
+                  </div>
+                  <div className=" flex gap-3 items-center">
+                    <BsFillArrowUpRightCircleFill className=" text-white h-4 w-4" />
+                    <p className="text-white">griffinglobaltech.com</p>
+                  </div>
+                </div>
+                <div className=" flex gap-6">
+                  <div className=" flex flex-col mt-5">
+                     <p className=" text-white">Developing front-end and mobile app solutions (B2C, B2B) in Travel Tech on React/Next.js framework and Flutter SDK.</p>
+                     <div className=" flex gap-3 mt-5">
+                      <span className=" text-white bg-[#2c3599] rounded-full px-4 py-1">Javascript</span>
+                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">React</span>
+                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">NextJs</span>
+                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">.NET</span>
+                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">Angular</span>
+                     </div>
+                  </div>
+                  <div>
+                    <Image src={logo} alt="" className=" h-16 w-36" />
+                  </div>
+                </div>
+              </div>
+            </AccordionContent>
+          </AccordionItem>
 
-          <div className="relative min-h-[225px] group bg-opacity-40 hover:bg-opacity-100 justify-center rounded-xl duration-150 ease-linear p-4 flex flex-col items-center">
-            <Image
-              src={dashboard}
-              alt=""
-              className=" rounded-lg boarder h-auto md:52 w-full"
-            />
-            <h4 className="mt-4 self-start">
-              A dashboard for both admin and the normal user.
-            </h4>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                textDecoration: "none",
-              }}
-              className="bg-[#001233]/70 px-2 py-[3.5px] text-[#efe0ca] text-sm flex items-center gap-1.5 px-2 underline mt-2 text-accent self-start rounded-lg"
-            >
-              <BiUpload className=" h-4 w-4" /> see the app
-            </a>
-          </div>
+        </Accordion>
+        <Accordion type="single" collapsible>
+          <AccordionItem value="item-1" className=" border border-none">
+            <AccordionTrigger className="">
+              <div className=" text-white h-16 rounded-lg bg-[#430d79] w-full flex items-center justify-around ">
+                <h3 className=" text-[20px]">Mid-Level Software Engineer @ Global Griffin Tech </h3>
+                <h3>2023 - Present</h3>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className=" mr-5 " >
+              <div className=" bg-[#241d41] rounded-lg px-6 py-7">
+                <div className=" flex gap-5 items-center">
+                  <div className=" flex gap-3 items-center ">
+                    <RiMapPinFill className=" text-white h-4 w-4" />
+                    <p className="text-white">Nyeri, Kenya</p>
+                  </div>
+                  <div className=" flex gap-3 items-center">
+                    <BsFillArrowUpRightCircleFill className=" text-white h-4 w-4" />
+                    <p className="text-white">griffinglobaltech.com</p>
+                  </div>
+                </div>
+                <div className=" flex gap-6">
+                  <div className=" flex flex-col mt-5">
+                     <p className=" text-white">Developing front-end and mobile app solutions (B2C, B2B) in Travel Tech on React/Next.js framework and Flutter SDK.</p>
+                     <div className=" flex gap-3 mt-5">
+                      <span className=" text-white bg-[#2c3599] rounded-full px-4 py-1">Javascript</span>
+                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">React</span>
+                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">NextJs</span>
+                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">.NET</span>
+                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">Angular</span>
+                     </div>
+                  </div>
+                  <div>
+                    <Image src={logo} alt="" className=" h-16 w-36" />
+                  </div>
+                </div>
+              </div>
+            </AccordionContent>
+          </AccordionItem>
 
-          <div className="relative min-h-[225px] group bg-opacity-40 hover:bg-opacity-100 justify-center rounded-xl duration-150 ease-linear p-4 flex flex-col items-center">
-            <Image
-              src={dashboard}
-              alt=""
-              className=" rounded-lg boarder h-auto md:52 w-full"
-            />
-            <h4 className="mt-4 self-start">
-              A dashboard for both admin and the normal user.
-            </h4>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                textDecoration: "none",
-              }}
-              className="bg-[#001233]/70 px-2 py-[3.5px] text-[#efe0ca] text-sm flex items-center gap-1.5 px-2 underline mt-2 text-accent self-start rounded-lg"
-            >
-              <BiUpload className=" h-4 w-4" /> see the app
-            </a>
-          </div>
+        </Accordion>
+        <Accordion type="single" collapsible>
+          <AccordionItem value="item-1" className=" border border-none" >
+            <AccordionTrigger className="">
+              <div className=" text-white h-16 rounded-lg bg-[#430d79] w-full flex items-center justify-around ">
+                <h3 className=" text-[20px]">Mid-Level Software Engineer @ Global Griffin Tech </h3>
+                <h3>2023 - Present</h3>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className=" mr-5 " >
+              <div className=" bg-[#241d41] rounded-lg px-6 py-7">
+                <div className=" flex gap-5 items-center">
+                  <div className=" flex gap-3 items-center ">
+                    <RiMapPinFill className=" text-white h-4 w-4" />
+                    <p className="text-white">Nyeri, Kenya</p>
+                  </div>
+                  <div className=" flex gap-3 items-center">
+                    <BsFillArrowUpRightCircleFill className=" text-white h-4 w-4" />
+                    <p className="text-white">griffinglobaltech.com</p>
+                  </div>
+                </div>
+                <div className=" flex gap-6">
+                  <div className=" flex flex-col mt-5">
+                     <p className=" text-white">Developing front-end and mobile app solutions (B2C, B2B) in Travel Tech on React/Next.js framework and Flutter SDK.</p>
+                     <div className=" flex gap-3 mt-5">
+                      <span className=" text-white bg-[#2c3599] rounded-full px-4 py-1">Javascript</span>
+                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">React</span>
+                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">NextJs</span>
+                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">.NET</span>
+                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">Angular</span>
+                     </div>
+                  </div>
+                  <div>
+                    <Image src={logo} alt="" className=" h-16 w-36" />
+                  </div>
+                </div>
+              </div>
+            </AccordionContent>
+          </AccordionItem>
 
-          <div className="relative min-h-[225px] group bg-opacity-40 hover:bg-opacity-100 justify-center rounded-xl duration-150 ease-linear p-4 flex flex-col items-center">
-            <Image
-              src={dashboard}
-              alt=""
-              className=" rounded-lg boarder h-auto md:52 w-full"
-            />
-            <h4 className="mt-4 self-start">
-              A dashboard for both admin and the normal user.
-            </h4>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                textDecoration: "none",
-              }}
-              className="bg-[#001233]/70 px-2 py-[3.5px] text-[#efe0ca] text-sm flex items-center gap-1.5 px-2 underline mt-2 text-accent self-start rounded-lg"
-            >
-              <BiUpload className=" h-4 w-4" /> see the app
-            </a>
-          </div>
-        </div>
-        <div className="flex items-center justify-center block">
-          <button className="bg-[#ff595a] rounded-full w-fitContent px-3 py-2 text-lg font-[600] hover:bg-[#001233] hover:text-[#efe0ca] ">
-            View All Projects
-          </button>
-        </div>
+        </Accordion>
+      </div>
       </div>
 
       {/* section six */}
