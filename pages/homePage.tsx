@@ -502,106 +502,35 @@ const HomePage = (props: Props) => {
       </div>
 
       {/* section six */}
-      <div className="h-auto bg-gradient-to-t from-gray-200 mt-10 px-5 lg:px-20 2xl:px-60 py-10 flex flex-col items-center justify-center">
-        <h1 className="text-[#001233] text-[2.7rem] font-[700]">About Me</h1>
-        <div className="mt-5">
-          <Image
-            src={profile}
-            alt="profile"
-            width="250"
-            height="250"
-            className="rounded-full"
-          />
-        </div>
-        <div className="mt-10 flex flex-col items-center">
-          <div className="flex flex-col  text-center text-center w-[100%] justify-center">
-            <span className="whitespace-nowrap font-[700] text-1.3rem] mb-3">
-              Key Skills:
-            </span>
-            <div className="flex flex-col items-center gap-6">
-              <div className=" flex flex-col lg:flex-row gap-5 items-center">
-                <div className="flex">
-                  <div className=" w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
-                    Nodejs
-                  </div>
-                  <div className=" w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
-                    React
-                  </div>
-                  <div className=" w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
-                    TypeScript
-                  </div>
-                  <div className="lg:hidden w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
-                    AWS
-                  </div>
-                </div>
-
-                <div className="flex items-center mx-auto">
-                  <div className=" w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
-                    Next
-                  </div>
-                  <div className=" w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
-                    Express
-                  </div>
-                  <div className=" w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
-                    Tailwind
-                  </div>
-                  <div className="lg:hidden w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
-                    PostgreSQL
-                  </div>
-                </div>
-              </div>
-              <div className="flex">
-                <div className=" w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
-                  Docker
-                </div>
-                <div className=" w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
-                  HTML5
-                </div>
-                <div className=" w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
-                  CSS3
-                </div>
-                <div className="hidden lg:block w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
-                  AWS
-                </div>
-                <div className="hidden lg:block w-fit text-[0.9rem] ml-2 h-fit text-[#efe0ca] px-3 py-[3px] rounded-full bg-[#001233] ">
-                  PostgreSQL
-                </div>
+      <div className="flex bg-[#001233]/95 mt-10 px-5 lg:px-20 2xl:px-60 py-10 items-center justify-center">
+         <div className=" w-full max-w-[50%]">
+            <div className=" ">
+              <h2 className=" text-[43px] leading-[48px] font-bold text-white">Available for freelance opportunities</h2>
+              <div className=" mt-10  max-w-[55%]">
+              <p className=" text-white text-[20px] tracking-wider font-serif">Have an exciting project you need help with?</p>
+              <p className=" text-white text-[20px] tracking-wider font-serif">Send me an email or contact me via instant message!</p>
               </div>
             </div>
-          </div>
-          <div className="mt-16 flex flex-col md:flex-row gap-4">
-            <button
-              onClick={(e) =>
-                (window.location.href = "mailto:dkirigha18@gmail.com")
-              }
-              className="bg-[#ff595a] w-fit rounded-full px-3 font-[700] py-2 text-[#001233] text-[#001233]"
-            >
-              Contact Me Via Email
-            </button>
-            <button
-              onClick={onDownloadCv}
-              className="bg-[#ff595a] flex gap-2 justify-center items-center w-fit rounded-full px-3 font-[700] py-2 text-[#001233] text-[#001233]"
-            >
-              <FaDownload /> Download My CV
-            </button>
-          </div>
-        </div>
+            <div className=" mt-32">
+              <h2 className=" text-white text-[20px] cursor-pointer">dkirigha18@gmail.com</h2>
+              <ul className=" flex flex-col ">
+                <li className=" text-white text-[20px] cursor-pointer">LinkedIn</li>
+                <li className=" text-white text-[20px] cursor-pointer">Github</li>
+                <li className=" text-white text-[20px] cursor-pointer">Messanger</li>
+              </ul>
+            </div>
+         </div>
+         <div className=" w-full max-w-[50%] ">
+            <div className="">
+              <h2 className=" text-[55px] text-white">Available for freelance opportunities</h2>
+              <div className=" mt-10">
+              <p >Have an exciting project you need help with?</p>
+              <p >Send me an email or contact me via instant message!</p>
+              </div>
+            </div>
+         </div>
       </div>
-
-      {/* section seven */}
-      <div className="h-auto bg-white mt-10 px-5 lg:px-20 2xl:px-60 pt-10 flex items-center justify-center">
-        <div className=" bg-[#efe0ca] mb-8 flex flex-col items-center justify-center h-full w-[750px] rounded-lg">
-          <h1 className="text-[#001233] text-[1.7rem] md:text-[2.5rem] text-center font-[700] mt-8">
-            We can Work Together
-          </h1>
-          <p className="text-[1.2rem] md:text-[1.5rem] text-center text-[#001233] font-[500] mt-10">
-            Want to get your project done? Ready to deliver your expectation
-          </p>
-          <button className="my-8 bg-[#efe0ca] border border-[#001233] text-[#001233] font-[600] hover:bg-[#001233] hover:text-[#efe0ca] py-2 px-5 rounded-full hover:tracking-widest text-lg hover:bg-opacity-90 transition-all duration-150 ease-linear  ">
-            Get In Touch
-          </button>
-        </div>
-      </div>
+    
     </div>
   );
 };
