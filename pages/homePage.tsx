@@ -1,12 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import image from "../public/image.png";
+import project from "../public/project.jpg";
 import dashboard from "../public/assets/lottery-app.png";
 import profile from "../public/assets/profile.jpg";
-import bg from "../public/assets/bg-22.avif";
 import { TbBrandReactNative } from "react-icons/tb";
-import { MdLocationOn, MdComputer } from "react-icons/md";
-import { BsLinkedin, BsGithub } from "react-icons/bs";
+import { MdComputer } from "react-icons/md";
 import { FaReact } from "react-icons/fa";
 import { BiUpload } from "react-icons/bi";
 import { langs } from "../utils/language";
@@ -138,26 +137,90 @@ const HomePage = (props: Props) => {
           </div>
         </div>
         <div className=" relative w-[50vw] shadow-inner inset-2 opacity-10 border border-none mx-auto bg-[url('../public/code-22.jpg')] h-[250px] bg-no-repeat bg-cover bg-center ">
-        <div className="absolute inset-0 fade-bg pointer-events-none"></div>
+          <div className="absolute inset-0 fade-bg pointer-events-none"></div>
         </div>
       </div>
 
       {/* section three */}
       <div className="h-auto bg-[#001233]/95">
         <div className=" px-5 lg:px-20 2xl:px-60">
-          <div className="flex flex-col items-center justify-center">
-            <h1 className="text-white uppercase text-[50px] tracking-[0.17em] font-[700]">
-              Tools
-            </h1>
-            <h3 className="pt-5 text-[#001233]/95text-[1.4rem] tracking-[0.15em] text-center leading-[2.3rem]">
-              Programming Languages and tools
-            </h3>
+          <div className="">
+            <ul className=" flex items-center gap-5">
+              <li className=" text-[#c6c5c6] text-[20px] font-[800]">
+                Filter by
+              </li>
+              <li className=" flex gap-2 relative cursor-pointer group">
+                <span className="text-[#c6c5c6] text-[18px] font-[700] group-hover:text-[#ff595a]">
+                  All
+                </span>
+                <span className="text-[#c6c5c6] text-[18px] font-[700] group-hover:text-[#ff595a] absolute -top-2 left-6">
+                  10
+                </span>
+              </li>
+              <div className=" bg-[#c6c5c6] h-5 w-[2px] origin-bottom rotate-12 ml-[4px]"></div>
+              <li className=" flex gap-2 relative cursor-pointer group">
+                <span className="text-[#c6c5c6] text-[18px] font-[700] group-hover:text-[#ff595a]">
+                  Data Visualization
+                </span>
+                <span className="text-[#c6c5c6] text-[18px] font-[700] group-hover:text-[#ff595a] absolute -top-2 -right-[7%] ">
+                  1
+                </span>
+              </li>
+              <div className=" bg-[#c6c5c6] h-5 w-[2px] origin-bottom rotate-12"></div>
+              <li className=" flex gap-2 relative cursor-pointer group">
+                <span className="text-[#c6c5c6] text-[18px] font-[700] group-hover:text-[#ff595a]">
+                  Web Development
+                </span>
+                <span className="text-[#c6c5c6] text-[18px] font-[700] group-hover:text-[#ff595a] absolute -top-3 -right-[12%]">
+                  09
+                </span>
+              </li>
+            </ul>
           </div>
 
+          <div className=" mt-7 grid grid-cols-3 gap-10">
+            <div className="group cursor-pointer rounded-lg">
+              <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
+                <Image
+                  src={project}
+                  alt=""
+                  className=" rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
+                />
+              </div>
+              <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
+                <p className=" text-[22px] leading-[19px] font-[700] py-3 z-50">
+                  Flight Local Web App
+                </p>
+                <div className=" relative">
+                  <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
+                    Web Development
+                  </p>
+                  <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
+                    View Project
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className=" rounded-lg">
+              <Image
+                src={project}
+                alt=""
+                className=" rounded-lg boarder h-[300px] md:52"
+              />
+            </div>
+            <div className=" rounded-lg">
+              <Image
+                src={project}
+                alt=""
+                className=" rounded-lg boarder h-[300px] md:52"
+              />
+            </div>
+          </div>
         </div>
       </div>
       {/* section five */}
-      <div className="h-auto bg-white mt-10 px-5 lg:px-20 2xl:px-60 pt-10">
+      <div className="h-auto bg-[#001233]/95 px-5 lg:px-20 2xl:px-60 pt-10">
         <div className="flex items-center justify=center flex-col">
           <h3 className="text-[#001233] text-[2rem] ">Featured projects</h3>
           <h1 className="text-[#001233] font-[600] text-[2.2rem]">
