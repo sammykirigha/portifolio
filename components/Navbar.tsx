@@ -43,28 +43,11 @@ const Navbar = (props: Props) => {
             </Link>
             <Link
               onClick={() => setShowNavItems(false)}
-              href="/Services"
-              className="lg:ml-7 mt-4 lg:mt-0 !text-dark lg:!text-[#efe0ca] hover:underline cursor-pointer text-xl font-medium tracking-wide"
-            >
-              Services
-            </Link>
-            <Link
-              onClick={() => setShowNavItems(false)}
-              href="/Blogs"
-              className="lg:ml-7 mt-4 lg:mt-0 !text-dark lg:!text-[#efe0ca] hover:underline cursor-pointer text-xl font-medium tracking-wide"
-            >
-              Blogs
-            </Link>
-            <Link
-              onClick={() => setShowNavItems(false)}
               href="/Contact"
               className="lg:ml-7 mt-4 lg:mt-0 !text-dark lg:!text-[#efe0ca] hover:underline cursor-pointer text-xl font-medium whitespace-nowrap tracking-wide"
             >
               Contact me
             </Link>
-            <button className="!bg-[#efe0ca] text-[#001233] cursor-pointer text-xl font-medium whitespace-nowrap lg:ml-8 mt-6 xl:ml-10 lg:mt-0 border border-[#efe0ca] rounded-full px-3 py-1 hover:bg-[#e71356]">
-              Hire Me
-            </button>
           </div>
           <div
             onClick={() => setShowNavItems(!showNavItems)}

@@ -8,9 +8,8 @@ import logo from "../public/griffin-logo.png";
 import { TbBrandReactNative } from "react-icons/tb";
 import { MdComputer } from "react-icons/md";
 import { FaLocationArrow, FaReact } from "react-icons/fa";
-import { BiUpload } from "react-icons/bi";
 import { langs } from "../utils/language";
-import { FaRegLightbulb, FaDownload } from "react-icons/fa";
+import { FaRegLightbulb, FaDownload, FaQuoteRight } from "react-icons/fa";
 import { FaArrowAltCircleDown } from "react-icons/fa";
 import {
   Accordion,
@@ -19,8 +18,10 @@ import {
   AccordionTrigger,
 } from "../components/ui/Accordion";
 import { RiMapPinFill } from "react-icons/ri";
-import { BsArrowUpRightCircleFill, BsFillArrowUpRightCircleFill } from "react-icons/bs";
-
+import {
+  BsArrowUpRightCircleFill,
+  BsFillArrowUpRightCircleFill,
+} from "react-icons/bs";
 
 type Props = {};
 
@@ -374,163 +375,315 @@ const HomePage = (props: Props) => {
       {/* section five */}
       <div className="h-auto mt-10  px-5 lg:px-20 2xl:px-60 pt-10">
         <div className="flex items-center justify=center flex-col">
-          <h1 className="text-white text-[3rem] leading-[2.5rem] font-[700] ">Professional</h1>
+          <h1 className="text-white text-[3rem] leading-[2.5rem] font-[700] ">
+            Professional
+          </h1>
           <h3 className="text-white text-[2.5rem] font-[700]">Experience </h3>
         </div>
-      <div className=" container max-w-[1024px]">
-        <Accordion type="single" collapsible>
-          <AccordionItem value="item-1" className=" border border-none">
-            <AccordionTrigger className="">
-              <div className=" text-white h-16 rounded-lg bg-[#430d79] w-full flex items-center justify-around ">
-                <h3 className=" text-[20px]">Mid-Level Software Engineer @ Global Griffin Tech </h3>
-                <h3>2023 - Present</h3>
-              </div>
-            </AccordionTrigger>
-            <AccordionContent className=" mr-5 " >
-              <div className=" bg-[#241d41] rounded-lg px-6 py-7">
-                <div className=" flex gap-5 items-center">
-                  <div className=" flex gap-3 items-center ">
-                    <RiMapPinFill className=" text-white h-4 w-4" />
-                    <p className="text-white">Nyeri, Kenya</p>
+        <div className=" container max-w-[1024px]">
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1" className=" border border-none">
+              <AccordionTrigger className="">
+                <div className=" text-white h-16 rounded-lg bg-[#430d79] w-full flex items-center justify-around ">
+                  <h3 className=" text-[20px]">
+                    Mid-Level Software Engineer @ Global Griffin Tech{" "}
+                  </h3>
+                  <h3>2023 - Present</h3>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className=" mr-1 ">
+                <div className=" bg-[#241d41] rounded-lg px-6 py-7">
+                  <div className=" flex gap-5 items-center">
+                    <div className=" flex gap-3 items-center ">
+                      <RiMapPinFill className=" text-white h-4 w-4" />
+                      <p className="text-white">Nyeri, Kenya</p>
+                    </div>
+                    <div className=" flex gap-3 items-center">
+                      <BsFillArrowUpRightCircleFill className=" text-white h-4 w-4" />
+                      <p className="text-white">griffinglobaltech.com</p>
+                    </div>
                   </div>
-                  <div className=" flex gap-3 items-center">
-                    <BsFillArrowUpRightCircleFill className=" text-white h-4 w-4" />
-                    <p className="text-white">griffinglobaltech.com</p>
+                  <div className=" flex gap-6">
+                    <div className=" flex flex-col mt-5">
+                      <p className=" text-white">
+                        Developing front-end and mobile app solutions (B2C, B2B)
+                        in Travel Tech on React/Next.js framework and Flutter
+                        SDK.
+                      </p>
+                      <div className=" flex gap-3 mt-5">
+                        <span className=" text-white bg-[#2c3599] rounded-full px-4 py-1">
+                          Javascript
+                        </span>
+                        <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">
+                          React
+                        </span>
+                        <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">
+                          NextJs
+                        </span>
+                        <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">
+                          .NET
+                        </span>
+                        <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">
+                          Angular
+                        </span>
+                      </div>
+                    </div>
+                    <div>
+                      <Image src={logo} alt="" className=" h-16 w-36" />
+                    </div>
                   </div>
                 </div>
-                <div className=" flex gap-6">
-                  <div className=" flex flex-col mt-5">
-                     <p className=" text-white">Developing front-end and mobile app solutions (B2C, B2B) in Travel Tech on React/Next.js framework and Flutter SDK.</p>
-                     <div className=" flex gap-3 mt-5">
-                      <span className=" text-white bg-[#2c3599] rounded-full px-4 py-1">Javascript</span>
-                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">React</span>
-                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">NextJs</span>
-                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">.NET</span>
-                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">Angular</span>
-                     </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1" className=" border border-none">
+              <AccordionTrigger className="">
+                <div className=" text-white h-16 rounded-lg bg-[#430d79] w-full flex items-center justify-around ">
+                  <h3 className=" text-[20px]">
+                    Mid-Level Software Engineer @ Global Griffin Tech{" "}
+                  </h3>
+                  <h3>2023 - Present</h3>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className=" mr-1 ">
+                <div className=" bg-[#241d41] rounded-lg px-6 py-7">
+                  <div className=" flex gap-5 items-center">
+                    <div className=" flex gap-3 items-center ">
+                      <RiMapPinFill className=" text-white h-4 w-4" />
+                      <p className="text-white">Nyeri, Kenya</p>
+                    </div>
+                    <div className=" flex gap-3 items-center">
+                      <BsFillArrowUpRightCircleFill className=" text-white h-4 w-4" />
+                      <p className="text-white">griffinglobaltech.com</p>
+                    </div>
                   </div>
-                  <div>
-                    <Image src={logo} alt="" className=" h-16 w-36" />
+                  <div className=" flex gap-6">
+                    <div className=" flex flex-col mt-5">
+                      <p className=" text-white">
+                        Developing front-end and mobile app solutions (B2C, B2B)
+                        in Travel Tech on React/Next.js framework and Flutter
+                        SDK.
+                      </p>
+                      <div className=" flex gap-3 mt-5">
+                        <span className=" text-white bg-[#2c3599] rounded-full px-4 py-1">
+                          Javascript
+                        </span>
+                        <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">
+                          React
+                        </span>
+                        <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">
+                          NextJs
+                        </span>
+                        <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">
+                          .NET
+                        </span>
+                        <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">
+                          Angular
+                        </span>
+                      </div>
+                    </div>
+                    <div>
+                      <Image src={logo} alt="" className=" h-16 w-36" />
+                    </div>
                   </div>
                 </div>
-              </div>
-            </AccordionContent>
-          </AccordionItem>
-
-        </Accordion>
-        <Accordion type="single" collapsible>
-          <AccordionItem value="item-1" className=" border border-none">
-            <AccordionTrigger className="">
-              <div className=" text-white h-16 rounded-lg bg-[#430d79] w-full flex items-center justify-around ">
-                <h3 className=" text-[20px]">Mid-Level Software Engineer @ Global Griffin Tech </h3>
-                <h3>2023 - Present</h3>
-              </div>
-            </AccordionTrigger>
-            <AccordionContent className=" mr-5 " >
-              <div className=" bg-[#241d41] rounded-lg px-6 py-7">
-                <div className=" flex gap-5 items-center">
-                  <div className=" flex gap-3 items-center ">
-                    <RiMapPinFill className=" text-white h-4 w-4" />
-                    <p className="text-white">Nyeri, Kenya</p>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1" className=" border border-none">
+              <AccordionTrigger className="">
+                <div className=" text-white h-16 rounded-lg bg-[#430d79] w-full flex items-center justify-around ">
+                  <h3 className=" text-[20px]">
+                    Mid-Level Software Engineer @ Global Griffin Tech{" "}
+                  </h3>
+                  <h3>2023 - Present</h3>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className=" mr-1 ">
+                <div className=" bg-[#241d41] rounded-lg px-6 py-7">
+                  <div className=" flex gap-5 items-center">
+                    <div className=" flex gap-3 items-center ">
+                      <RiMapPinFill className=" text-white h-4 w-4" />
+                      <p className="text-white">Nyeri, Kenya</p>
+                    </div>
+                    <div className=" flex gap-3 items-center">
+                      <BsFillArrowUpRightCircleFill className=" text-white h-4 w-4" />
+                      <p className="text-white">griffinglobaltech.com</p>
+                    </div>
                   </div>
-                  <div className=" flex gap-3 items-center">
-                    <BsFillArrowUpRightCircleFill className=" text-white h-4 w-4" />
-                    <p className="text-white">griffinglobaltech.com</p>
+                  <div className=" flex gap-6">
+                    <div className=" flex flex-col mt-5">
+                      <p className=" text-white">
+                        Developing front-end and mobile app solutions (B2C, B2B)
+                        in Travel Tech on React/Next.js framework and Flutter
+                        SDK.
+                      </p>
+                      <div className=" flex gap-3 mt-5">
+                        <span className=" text-white bg-[#2c3599] rounded-full px-4 py-1">
+                          Javascript
+                        </span>
+                        <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">
+                          React
+                        </span>
+                        <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">
+                          NextJs
+                        </span>
+                        <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">
+                          .NET
+                        </span>
+                        <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">
+                          Angular
+                        </span>
+                      </div>
+                    </div>
+                    <div>
+                      <Image src={logo} alt="" className=" h-16 w-36" />
+                    </div>
                   </div>
                 </div>
-                <div className=" flex gap-6">
-                  <div className=" flex flex-col mt-5">
-                     <p className=" text-white">Developing front-end and mobile app solutions (B2C, B2B) in Travel Tech on React/Next.js framework and Flutter SDK.</p>
-                     <div className=" flex gap-3 mt-5">
-                      <span className=" text-white bg-[#2c3599] rounded-full px-4 py-1">Javascript</span>
-                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">React</span>
-                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">NextJs</span>
-                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">.NET</span>
-                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">Angular</span>
-                     </div>
-                  </div>
-                  <div>
-                    <Image src={logo} alt="" className=" h-16 w-36" />
-                  </div>
-                </div>
-              </div>
-            </AccordionContent>
-          </AccordionItem>
-
-        </Accordion>
-        <Accordion type="single" collapsible>
-          <AccordionItem value="item-1" className=" border border-none" >
-            <AccordionTrigger className="">
-              <div className=" text-white h-16 rounded-lg bg-[#430d79] w-full flex items-center justify-around ">
-                <h3 className=" text-[20px]">Mid-Level Software Engineer @ Global Griffin Tech </h3>
-                <h3>2023 - Present</h3>
-              </div>
-            </AccordionTrigger>
-            <AccordionContent className=" mr-5 " >
-              <div className=" bg-[#241d41] rounded-lg px-6 py-7">
-                <div className=" flex gap-5 items-center">
-                  <div className=" flex gap-3 items-center ">
-                    <RiMapPinFill className=" text-white h-4 w-4" />
-                    <p className="text-white">Nyeri, Kenya</p>
-                  </div>
-                  <div className=" flex gap-3 items-center">
-                    <BsFillArrowUpRightCircleFill className=" text-white h-4 w-4" />
-                    <p className="text-white">griffinglobaltech.com</p>
-                  </div>
-                </div>
-                <div className=" flex gap-6">
-                  <div className=" flex flex-col mt-5">
-                     <p className=" text-white">Developing front-end and mobile app solutions (B2C, B2B) in Travel Tech on React/Next.js framework and Flutter SDK.</p>
-                     <div className=" flex gap-3 mt-5">
-                      <span className=" text-white bg-[#2c3599] rounded-full px-4 py-1">Javascript</span>
-                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">React</span>
-                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">NextJs</span>
-                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">.NET</span>
-                      <span className=" text-white rounded-full bg-[#2c3599]  px-4 py-1">Angular</span>
-                     </div>
-                  </div>
-                  <div>
-                    <Image src={logo} alt="" className=" h-16 w-36" />
-                  </div>
-                </div>
-              </div>
-            </AccordionContent>
-          </AccordionItem>
-
-        </Accordion>
-      </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
       </div>
 
       {/* section six */}
-      <div className="flex bg-[#001233]/95 mt-10 px-5 lg:px-20 2xl:px-60 py-10 items-center justify-center">
-         <div className=" w-full max-w-[50%]">
-            <div className=" ">
-              <h2 className=" text-[43px] leading-[48px] font-bold text-white">Available for freelance opportunities</h2>
-              <div className=" mt-10  max-w-[55%]">
-              <p className=" text-white text-[20px] tracking-wider font-serif">Have an exciting project you need help with?</p>
-              <p className=" text-white text-[20px] tracking-wider font-serif">Send me an email or contact me via instant message!</p>
+      <div className="flex bg-[#001233]/95 mt-10 px-5 lg:px-20 2xl:px-60 pb-10 items-start h-full justify-center">
+        <div className=" min-w-[40%] mt-10">
+          <div className=" ">
+            <h2 className=" text-[43px] leading-[48px] font-bold text-white">
+              Available for freelance opportunities
+            </h2>
+            <div className=" mt-10 flex flex-col gap-3  max-w-[55%]">
+              <p className=" text-white text-[20px] tracking-wider font-serif">
+                Have an exciting project you need help with?
+              </p>
+              <p className=" text-white text-[20px] tracking-wider font-serif">
+                Send me an email or contact me via instant message!
+              </p>
+            </div>
+          </div>
+          <div className="pb-0 sm:pb-0  text-white my-16">
+            <h1 className="text-beige text-[1.4rem] font-[600]">
+              Positions of Interest
+            </h1>
+            <div className="bg-beige h-[2px] mt-2 w-[100px]"></div>
+            <div className="flex sm:flex-col md:flex-row gap-7 pl-0  mt-2">
+              <div className="flex flex-col gap-2">
+                <span className="font-serif text-beige w-fit py-1 text-[0.9rem] xl:text-[1.1rem] cursor-pointer bg-light-blue opacity-99 rounded-full flex text-center items-center justify-center">
+                  ReactJs Developer
+                </span>
+                <span className="text-beige font-serif w-fit py-1 text-[0.9rem] xl:text-[1.1rem] cursor-pointer bg-light-blue opacity-99 rounded-full flex text-center items-center justify-center">
+                  C# .NET Developer
+                </span>
+                <span className="text-beige font-serif w-fit py-1 text-[0.9rem] xl:text-[1.1rem] cursor-pointer bg-light-blue opacity-99 rounded-full flex text-center items-center justify-center">
+                  Devops Engineer
+                </span>
+              </div>
+              <div className="flex flex-col gap-2">
+                <span className="text-beige font-serif w-fit py-1 text-[0.9rem] xl:text-[1.1rem] cursor-pointer bg-light-blue opacity-99 rounded-full flex text-center items-center justify-center">
+                  Nodejs Developer
+                </span>
+                <span className="text-beige font-serif w-fit py-1 text-[0.9rem] xl:text-[1.1rem] cursor-pointer bg-light-blue opacity-99 rounded-full flex text-center items-center justify-center">
+                  FullStack Developer
+                </span>
+                <span className="text-beige font-serif w-fit py-1 text-[0.9rem] xl:text-[1.1rem] cursor-pointer bg-light-blue opacity-99 rounded-full flex text-center items-center justify-center">
+                  NextJs Developer
+                </span>
               </div>
             </div>
-            <div className=" mt-32">
-              <h2 className=" text-white text-[20px] cursor-pointer">dkirigha18@gmail.com</h2>
-              <ul className=" flex flex-col ">
-                <li className=" text-white text-[20px] cursor-pointer">LinkedIn</li>
-                <li className=" text-white text-[20px] cursor-pointer">Github</li>
-                <li className=" text-white text-[20px] cursor-pointer">Messanger</li>
-              </ul>
+          </div>
+          <div className=" mt-5">
+            <h2 className=" text-white text-[20px] cursor-pointer font-serif border-b-[3px] w-fit border-b-[#430d79] ">
+              dkirigha18@gmail.com
+            </h2>
+            <ul className=" flex flex-col mt-5 ">
+              <li className=" text-white text-[20px] cursor-pointer font-serif">
+                LinkedIn
+              </li>
+              <li className=" text-white text-[20px] cursor-pointer font-serif">
+                Github
+              </li>
+              <li className=" text-white text-[20px] cursor-pointer font-serif">
+                Messanger
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className=" w-full flex h-full px-5">
+          <div className=" bg-[#bc60fb] w-[50%]">
+            <div className=" p-6 flex items-center justify-between">
+              <FaQuoteRight className=" h-16 w-16 text-white/40" />
+              <span className=" h-20 w-20 rounded-full flex items-center justify-center text-[18px] text-white font-[700] bg-[#430d79]">
+                AE
+              </span>
             </div>
-         </div>
-         <div className=" w-full max-w-[50%] ">
-            <div className="">
-              <h2 className=" text-[55px] text-white">Available for freelance opportunities</h2>
-              <div className=" mt-10">
-              <p >Have an exciting project you need help with?</p>
-              <p >Send me an email or contact me via instant message!</p>
+            <div className=" p-5">
+              <p className=" text-white text-[19px] font-serif  ">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
+                dolor pariatur distinctio totam, et dicta nostrum dolorem eaque
+                laborum. Accusantium architecto, dolorem vitae accusamus ex
+                temporibus molestias commodi molestiae hic? Quos id temporibus
+                perspiciatis, illo ducimus ex inventore voluptatem maxime.
+                Officiis adipisci voluptatum accusantium neque asperiores
+                aliquid ipsam impedit atque mollitia delectus itaque autem
+                cupiditate totam fugit at, expedita aspernatur? Vel, saepe.
+                Consectetur, neque!
+              </p>
+              <div className=" text-white mt-5">
+                <p>- Aaron Etler</p>
+                <p>Chief Technology Officer at Griffin Global Solutions</p>
               </div>
             </div>
-         </div>
+          </div>
+          <div className=" bg-[#923fe6] w-[50%]">
+            <div className=" bg-[#0067dc]">
+              <div className=" p-6 flex items-center justify-between">
+                <FaQuoteRight className=" h-16 w-16 text-white/40" />
+                <span className=" h-20 w-20 rounded-full flex items-center justify-center text-[18px] text-white font-[700] bg-[#430d79]">
+                  AE
+                </span>
+              </div>
+              <div className=" px-4">
+                <p className=" text-white">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
+                  dolor pariatur distinctio totam, et dicta nostrum dolorem
+                  eaque laborum. Accusantium architecto, dolorem vitae accusamus
+                  ex temporibus molestias commodi molestiae hic?
+                </p>
+                <div className=" text-white py-5 ">
+                  <p>- Aaron Etler</p>
+                  <p>CTO at Griffin Global Solutions</p>
+                </div>
+              </div>
+            </div>
+            <div className=" bg-[#923fe6]">
+              <div className=" p-6 flex items-center justify-between">
+                <FaQuoteRight className=" h-16 w-16 text-white/40" />
+                <span className=" h-20 w-20 rounded-full flex items-center justify-center text-[18px] text-white font-[700] bg-[#430d79]">
+                  AE
+                </span>
+              </div>
+              <div className=" px-4">
+              <p className=" text-white">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
+                dolor pariatur distinctio totam, et dicta nostrum dolorem eaque
+                laborum. Accusantium architecto, dolorem vitae accusamus ex
+                temporibus molestias commodi molestiae hic?
+              </p>
+              <div className=" text-white my-5">
+                <p>- Aaron Etler</p>
+                <p>CTO at Griffin Global Solutions</p>
+              </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    
     </div>
   );
 };
