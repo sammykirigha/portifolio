@@ -1,15 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import image from "../public/image.png";
 import project from "../public/project.jpg";
-import dashboard from "../public/assets/lottery-app.png";
-import profile from "../public/assets/profile.jpg";
 import logo from "../public/griffin-logo.png";
 import { TbBrandReactNative } from "react-icons/tb";
 import { MdComputer } from "react-icons/md";
-import { FaLocationArrow, FaReact } from "react-icons/fa";
-import { langs } from "../utils/language";
-import { FaRegLightbulb, FaDownload, FaQuoteRight } from "react-icons/fa";
+import { FaReact } from "react-icons/fa";
+import { FaQuoteRight } from "react-icons/fa";
 import { FaArrowAltCircleDown } from "react-icons/fa";
 import {
   Accordion,
@@ -18,10 +14,7 @@ import {
   AccordionTrigger,
 } from "../components/ui/Accordion";
 import { RiMapPinFill } from "react-icons/ri";
-import {
-  BsArrowUpRightCircleFill,
-  BsFillArrowUpRightCircleFill,
-} from "react-icons/bs";
+import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
 
 type Props = {};
 
@@ -41,15 +34,15 @@ const HomePage = (props: Props) => {
   return (
     <div className="bg-[#001233]/95">
       {/* introduction bg-[url('../public/assets/bg-22.avif')] bg-no-repeat bg-center bg-cover  */}
-      <div className="relative px-5 lg:px-20 2xl:px-60 bg-red-500 bg-[url('../public/assets/bg-22.avif')] h-[700px] bg-no-repeat bg-center bg-cover  ">
+      <div className="relative px-5 lg:px-20 2xl:px-60  bg-[url('../public/assets/bg-22.avif')] h-[300px] md:h-[500px] lg:h-[600px] bg-no-repeat bg-center bg-cover  ">
         <div className=" w-full absolute top-[55%] -right-[0%]  ">
           <div className="flex flex-col">
             <div className=" w-full mx-auto  flex items-center justify-center">
-              <div className="px-3 w-full flex flex-col items-center justify-center">
-                <h2 className="text-white text-[105px] font-bold">
-                  Samuel Kirigha.
+              <div className="px-3 mt-5 lg:mt-0 w-full bg flex flex-col items-center justify-center">
+                <h2 className="text-white text-[35px] md:text-[55px] lg:text-[105px] font-bold">
+                  Samuel Kirigha
                 </h2>
-                <p className="text-white text-center items-center justify-center w-full  font-bold text-4xl">
+                <p className="text-white text-center items-center justify-center w-full  font-bold text-[15px] md:text-3xl lg:text-4xl">
                   Software Engineer, And App Developer
                 </p>
               </div>
@@ -71,8 +64,8 @@ const HomePage = (props: Props) => {
             <h1 className="text-white uppercase text-[1.7rem] tracking-[0.17em] font-[800]">
               My Expertise
             </h1>
-            <div className="flex mt-10 gap-4">
-              <div className="border border-[#efe0ca] max-h-[250px] w-full max-w-md p-3 rounded-md">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-4">
+              <div className="border border-[#efe0ca] max-h-[300px] w-full max-w-md p-3 rounded-md">
                 <div className=" flex gap-5 p-4">
                   <span>
                     <MdComputer className="text-6xl text-white/90 " />
@@ -96,7 +89,7 @@ const HomePage = (props: Props) => {
                   <div className=" absolute left-14 top-4 after:content-[''] bg-[#efe0ca]/50 my-2 h-[65%] w-[2px]"></div>
                 </div>
               </div>
-              <div className="border border-[#efe0ca] max-h-[250px] w-full max-w-md p-3 rounded-md">
+              <div className="border border-[#efe0ca] max-h-[300px] w-full max-w-md p-3 rounded-md">
                 <div className=" flex gap-5 p-4">
                   <span>
                     <FaReact className="text-6xl text-white " />
@@ -120,7 +113,7 @@ const HomePage = (props: Props) => {
                   <div className=" absolute left-14 top-4 after:content-[''] bg-[#efe0ca]/50 my-2 h-[65%] w-[2px]"></div>
                 </div>
               </div>
-              <div className="border border-[#efe0ca] max-h-[250px] w-full max-w-md p-3 rounded-md">
+              <div className="border border-[#efe0ca] max-h-[300px] w-full max-w-md p-3 rounded-md">
                 <div className=" flex gap-5 p-4">
                   <span>
                     <TbBrandReactNative className="text-6xl text-white " />
@@ -190,17 +183,127 @@ const HomePage = (props: Props) => {
           </div>
 
           <div className=" mt-7">
-            <div className=" grid grid-cols-3 gap-16">
-              <div className="group cursor-pointer rounded-lg">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-start">
+              <div className="group cursor-pointer rounded-lg col-span-1 ">
                 <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
                   <Image
                     src={project}
                     alt=""
-                    className=" rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
+                    className=" object-cover rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
                   />
                 </div>
                 <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
-                  <p className=" text-[22px] leading-[19px] font-[700] py-3 z-50">
+                  <p className=" text-[22px] leading-[19px] font-[700] py-3">
+                    Flight Local Web App
+                  </p>
+                  <div className=" relative">
+                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
+                      Web Development
+                    </p>
+                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
+                      View Project
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="group cursor-pointer rounded-lg col-span-1">
+                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
+                  <Image
+                    src={project}
+                    alt=""
+                    className=" object-cover rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
+                  />
+                </div>
+                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
+                  <p className=" text-[22px] leading-[19px] font-[700] py-3">
+                    Flight Local Web App
+                  </p>
+                  <div className=" relative">
+                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
+                      Web Development
+                    </p>
+                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
+                      View Project
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="group cursor-pointer rounded-lg col-span-1">
+                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
+                  <Image
+                    src={project}
+                    alt=""
+                    className="  object-cover rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
+                  />
+                </div>
+                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
+                  <p className=" text-[22px] leading-[19px] font-[700] py-3">
+                    Flight Local Web App
+                  </p>
+                  <div className=" relative">
+                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
+                      Web Development
+                    </p>
+                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
+                      View Project
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="group cursor-pointer rounded-lg col-span-1">
+                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
+                  <Image
+                    src={project}
+                    alt=""
+                    className=" object-cover rounded-t-lg boarder min-h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
+                  />
+                </div>
+                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
+                  <p className=" text-[22px] leading-[19px] font-[700] py-3">
+                    Flight Local Web App
+                  </p>
+                  <div className=" relative">
+                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
+                      Web Development
+                    </p>
+                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
+                      View Project
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className=" col-span-1 md:col-span-2 row-span-1 group cursor-pointer rounded-lg">
+                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
+                  <Image
+                    src={project}
+                    alt=""
+                    className=" object-cover rounded-t-lg boarder  transform transition duration-700 ease-in-out group-hover:scale-110"
+                  />
+                </div>
+                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
+                  <p className=" text-[22px] leading-[19px] font-[700] py-3">
+                    Flight Local Web App
+                  </p>
+                  <div className=" relative">
+                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
+                      Web Development
+                    </p>
+                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
+                      View Project
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-0 sm:-mt-16 md:mt-0 lg:-mt-16 group cursor-pointer rounded-lg">
+                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
+                  <Image
+                    src={project}
+                    alt=""
+                    className=" object-cover rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
+                  />
+                </div>
+                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
+                  <p className=" text-[22px] leading-[19px] font-[700] py-3">
                     Flight Local Web App
                   </p>
                   <div className=" relative">
@@ -218,11 +321,11 @@ const HomePage = (props: Props) => {
                   <Image
                     src={project}
                     alt=""
-                    className=" rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
+                    className=" object-cover rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
                   />
                 </div>
                 <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
-                  <p className=" text-[22px] leading-[19px] font-[700] py-3 z-50">
+                  <p className=" text-[22px] leading-[19px] font-[700] py-3">
                     Flight Local Web App
                   </p>
                   <div className=" relative">
@@ -240,121 +343,11 @@ const HomePage = (props: Props) => {
                   <Image
                     src={project}
                     alt=""
-                    className=" rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
+                    className="  object-cover rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
                   />
                 </div>
                 <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
-                  <p className=" text-[22px] leading-[19px] font-[700] py-3 z-50">
-                    Flight Local Web App
-                  </p>
-                  <div className=" relative">
-                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
-                      Web Development
-                    </p>
-                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
-                      View Project
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className="h-fit  group cursor-pointer rounded-lg">
-                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
-                  <Image
-                    src={project}
-                    alt=""
-                    className=" rounded-t-lg boarder min-h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
-                  />
-                </div>
-                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
-                  <p className=" text-[22px] leading-[19px] font-[700] py-3 z-50">
-                    Flight Local Web App
-                  </p>
-                  <div className=" relative">
-                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
-                      Web Development
-                    </p>
-                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
-                      View Project
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className="col-span-2 row-span-1 group cursor-pointer rounded-lg">
-                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
-                  <Image
-                    src={project}
-                    alt=""
-                    className=" rounded-t-lg boarder  transform transition duration-700 ease-in-out group-hover:scale-110"
-                  />
-                </div>
-                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
-                  <p className=" text-[22px] leading-[19px] font-[700] py-3 z-50">
-                    Flight Local Web App
-                  </p>
-                  <div className=" relative">
-                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
-                      Web Development
-                    </p>
-                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
-                      View Project
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className="-mt-32 group cursor-pointer rounded-lg">
-                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
-                  <Image
-                    src={project}
-                    alt=""
-                    className=" rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
-                  />
-                </div>
-                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
-                  <p className=" text-[22px] leading-[19px] font-[700] py-3 z-50">
-                    Flight Local Web App
-                  </p>
-                  <div className=" relative">
-                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
-                      Web Development
-                    </p>
-                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
-                      View Project
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className="group cursor-pointer rounded-lg">
-                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
-                  <Image
-                    src={project}
-                    alt=""
-                    className=" rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
-                  />
-                </div>
-                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
-                  <p className=" text-[22px] leading-[19px] font-[700] py-3 z-50">
-                    Flight Local Web App
-                  </p>
-                  <div className=" relative">
-                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
-                      Web Development
-                    </p>
-                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
-                      View Project
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className="group cursor-pointer rounded-lg">
-                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
-                  <Image
-                    src={project}
-                    alt=""
-                    className=" rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
-                  />
-                </div>
-                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
-                  <p className=" text-[22px] leading-[19px] font-[700] py-3 z-50">
+                  <p className=" text-[22px] leading-[19px] font-[700] py-3">
                     Flight Local Web App
                   </p>
                   <div className=" relative">
@@ -384,16 +377,18 @@ const HomePage = (props: Props) => {
           <Accordion type="single" collapsible>
             <AccordionItem value="item-1" className=" border border-none">
               <AccordionTrigger className="">
-                <div className=" text-white h-16 rounded-lg bg-[#430d79] w-full flex items-center justify-around ">
-                  <h3 className=" text-[20px]">
+                <div className=" text-white h-16 rounded-lg bg-[#430d79] w-full flex flex-col md:flex-row items-center justify-around ">
+                  <h3 className=" text-[14px] md:text-[20px]">
                     Mid-Level Software Engineer @ Global Griffin Tech{" "}
                   </h3>
-                  <h3>2023 - Present</h3>
+                  <h3 className=" text-[14px] md:text-[20px]">
+                    2023 - Present
+                  </h3>
                 </div>
               </AccordionTrigger>
               <AccordionContent className=" mr-1 ">
                 <div className=" bg-[#241d41] rounded-lg px-6 py-7">
-                  <div className=" flex gap-5 items-center">
+                  <div className=" flex flex-col sm:flex-row md:flex-row gap-5 items-start md:items-center">
                     <div className=" flex gap-3 items-center ">
                       <RiMapPinFill className=" text-white h-4 w-4" />
                       <p className="text-white">Nyeri, Kenya</p>
@@ -403,14 +398,14 @@ const HomePage = (props: Props) => {
                       <p className="text-white">griffinglobaltech.com</p>
                     </div>
                   </div>
-                  <div className=" flex gap-6">
+                  <div className=" flex flex-col md:row gap-6">
                     <div className=" flex flex-col mt-5">
-                      <p className=" text-white">
+                      <p className=" text-white text-wraps">
                         Developing front-end and mobile app solutions (B2C, B2B)
                         in Travel Tech on React/Next.js framework and Flutter
                         SDK.
                       </p>
-                      <div className=" flex gap-3 mt-5">
+                      <div className=" flex flex-wrap gap-3 mt-5">
                         <span className=" text-white bg-[#2c3599] rounded-full px-4 py-1">
                           Javascript
                         </span>
@@ -439,16 +434,18 @@ const HomePage = (props: Props) => {
           <Accordion type="single" collapsible>
             <AccordionItem value="item-1" className=" border border-none">
               <AccordionTrigger className="">
-                <div className=" text-white h-16 rounded-lg bg-[#430d79] w-full flex items-center justify-around ">
-                  <h3 className=" text-[20px]">
-                    Mid-Level Software Engineer @ Global Griffin Tech{" "}
+                <div className=" text-white h-16 rounded-lg bg-[#430d79] w-full flex flex-col md:flex-row items-center justify-around ">
+                  <h3 className=" text-[14px] md:text-[20px]">
+                    Intern Software Engineer @ The Jitu.com{" "}
                   </h3>
-                  <h3>2023 - Present</h3>
+                  <h3 className=" text-[14px] md:text-[20px]">
+                    2023 - Present
+                  </h3>
                 </div>
               </AccordionTrigger>
               <AccordionContent className=" mr-1 ">
                 <div className=" bg-[#241d41] rounded-lg px-6 py-7">
-                  <div className=" flex gap-5 items-center">
+                  <div className=" flex flex-col sm:flex-row md:flex-row gap-5 items-start md:items-center">
                     <div className=" flex gap-3 items-center ">
                       <RiMapPinFill className=" text-white h-4 w-4" />
                       <p className="text-white">Nyeri, Kenya</p>
@@ -458,14 +455,14 @@ const HomePage = (props: Props) => {
                       <p className="text-white">griffinglobaltech.com</p>
                     </div>
                   </div>
-                  <div className=" flex gap-6">
+                  <div className=" flex flex-col md:row gap-6">
                     <div className=" flex flex-col mt-5">
-                      <p className=" text-white">
+                      <p className=" text-white text-wraps">
                         Developing front-end and mobile app solutions (B2C, B2B)
                         in Travel Tech on React/Next.js framework and Flutter
                         SDK.
                       </p>
-                      <div className=" flex gap-3 mt-5">
+                      <div className=" flex flex-wrap gap-3 mt-5">
                         <span className=" text-white bg-[#2c3599] rounded-full px-4 py-1">
                           Javascript
                         </span>
@@ -494,16 +491,18 @@ const HomePage = (props: Props) => {
           <Accordion type="single" collapsible>
             <AccordionItem value="item-1" className=" border border-none">
               <AccordionTrigger className="">
-                <div className=" text-white h-16 rounded-lg bg-[#430d79] w-full flex items-center justify-around ">
-                  <h3 className=" text-[20px]">
-                    Mid-Level Software Engineer @ Global Griffin Tech{" "}
+                <div className=" text-white h-16 rounded-lg bg-[#430d79] w-full flex flex-col md:flex-row items-center justify-around ">
+                  <h3 className=" text-[14px] md:text-[20px]">
+                    Fullstack Developer Upwork Frelancer{" "}
                   </h3>
-                  <h3>2023 - Present</h3>
+                  <h3 className=" text-[14px] md:text-[20px]">
+                    2023 - Present
+                  </h3>
                 </div>
               </AccordionTrigger>
               <AccordionContent className=" mr-1 ">
                 <div className=" bg-[#241d41] rounded-lg px-6 py-7">
-                  <div className=" flex gap-5 items-center">
+                  <div className=" flex flex-col sm:flex-row md:flex-row gap-5 items-start md:items-center">
                     <div className=" flex gap-3 items-center ">
                       <RiMapPinFill className=" text-white h-4 w-4" />
                       <p className="text-white">Nyeri, Kenya</p>
@@ -513,14 +512,14 @@ const HomePage = (props: Props) => {
                       <p className="text-white">griffinglobaltech.com</p>
                     </div>
                   </div>
-                  <div className=" flex gap-6">
+                  <div className=" flex flex-col md:row gap-6">
                     <div className=" flex flex-col mt-5">
-                      <p className=" text-white">
+                      <p className=" text-white text-wraps">
                         Developing front-end and mobile app solutions (B2C, B2B)
                         in Travel Tech on React/Next.js framework and Flutter
                         SDK.
                       </p>
-                      <div className=" flex gap-3 mt-5">
+                      <div className=" flex flex-wrap gap-3 mt-5">
                         <span className=" text-white bg-[#2c3599] rounded-full px-4 py-1">
                           Javascript
                         </span>
@@ -550,139 +549,137 @@ const HomePage = (props: Props) => {
       </div>
 
       {/* section six */}
-      <div className="flex bg-[#001233]/95 mt-10 px-5 lg:px-20 2xl:px-60 pb-10 items-start h-full justify-center">
-        <div className=" min-w-[40%] mt-10">
-          <div className=" ">
-            <h2 className=" text-[43px] leading-[48px] font-bold text-white">
+      <div className="flex flex-col-reverse md:flex-row bg-[#001233]/95 mt-10 pb-10 items-start h-full justify-center">
+        <div className="  min-w-[40%] mt-10 px-5">
+          <div className="">
+            <h2 className=" text-center md:text-start text-[43px] leading-[48px] font-bold text-white">
               Available for freelance opportunities
             </h2>
-            <div className=" mt-10 flex flex-col gap-3  max-w-[55%]">
-              <p className=" text-white text-[20px] tracking-wider font-serif">
+            <div className=" mt-10 flex flex-col gap-3 max-w-[80%]">
+              <p className=" text-white text-center md:text-start text-[20px] tracking-wider font-serif">
                 Have an exciting project you need help with?
               </p>
-              <p className=" text-white text-[20px] tracking-wider font-serif">
+              <p className=" text-white text-center md:text-start text-[20px] tracking-wider font-serif">
                 Send me an email or contact me via instant message!
               </p>
             </div>
           </div>
-          <div className="pb-0 sm:pb-0  text-white my-16">
-            <h1 className="text-beige text-[1.4rem] font-[600]">
+          <div className="pb-0 sm:pb-0 text-white my-16 flex flex-col items-center md:items-start">
+            <h1 className="text-beige text-[1.4rem] font-[600] border-b-[3px] w-fit border-b-[#bc60fb]">
               Positions of Interest
             </h1>
-            <div className="bg-beige h-[2px] mt-2 w-[100px]"></div>
             <div className="flex sm:flex-col md:flex-row gap-7 pl-0  mt-2">
               <div className="flex flex-col gap-2">
-                <span className="font-serif text-beige w-fit py-1 text-[0.9rem] xl:text-[1.1rem] cursor-pointer bg-light-blue opacity-99 rounded-full flex text-center items-center justify-center">
+                <span className="font-serif text-beige w-fit py-1 text-[1.1rem] leading-[1.8rem] xl:text-[1.1rem] cursor-pointer bg-light-blue opacity-99 rounded-full flex text-center items-center justify-center">
                   ReactJs Developer
                 </span>
-                <span className="text-beige font-serif w-fit py-1 text-[0.9rem] xl:text-[1.1rem] cursor-pointer bg-light-blue opacity-99 rounded-full flex text-center items-center justify-center">
+                <span className="text-beige font-serif w-fit py-1 text-[1.1rem] leading-[1.8rem] xl:text-[1.1rem] cursor-pointer bg-light-blue opacity-99 rounded-full flex text-center items-center justify-center">
                   C# .NET Developer
                 </span>
-                <span className="text-beige font-serif w-fit py-1 text-[0.9rem] xl:text-[1.1rem] cursor-pointer bg-light-blue opacity-99 rounded-full flex text-center items-center justify-center">
+                <span className="text-beige font-serif w-fit py-1 text-[1.1rem] leading-[1.8rem] xl:text-[1.1rem] cursor-pointer bg-light-blue opacity-99 rounded-full flex text-center items-center justify-center">
                   Devops Engineer
                 </span>
               </div>
               <div className="flex flex-col gap-2">
-                <span className="text-beige font-serif w-fit py-1 text-[0.9rem] xl:text-[1.1rem] cursor-pointer bg-light-blue opacity-99 rounded-full flex text-center items-center justify-center">
+                <span className="text-beige font-serif w-fit py-1 text-[1.1rem] leading-[1.8rem] xl:text-[1.1rem] cursor-pointer bg-light-blue opacity-99 rounded-full flex text-center items-center justify-center">
                   Nodejs Developer
                 </span>
-                <span className="text-beige font-serif w-fit py-1 text-[0.9rem] xl:text-[1.1rem] cursor-pointer bg-light-blue opacity-99 rounded-full flex text-center items-center justify-center">
+                <span className="text-beige font-serif w-fit py-1 text-[1.1rem] leading-[1.8rem] xl:text-[1.1rem] cursor-pointer bg-light-blue opacity-99 rounded-full flex text-center items-center justify-center">
                   FullStack Developer
                 </span>
-                <span className="text-beige font-serif w-fit py-1 text-[0.9rem] xl:text-[1.1rem] cursor-pointer bg-light-blue opacity-99 rounded-full flex text-center items-center justify-center">
+                <span className="text-beige font-serif w-fit py-1 text-[1.1rem] leading-[1.8rem] xl:text-[1.1rem] cursor-pointer bg-light-blue opacity-99 rounded-full flex text-center items-center justify-center">
                   NextJs Developer
                 </span>
               </div>
             </div>
           </div>
-          <div className=" mt-5">
-            <h2 className=" text-white text-[20px] cursor-pointer font-serif border-b-[3px] w-fit border-b-[#430d79] ">
+          <div className=" mt-5 flex flex-col items-center md:items-start">
+            <h2 className=" text-white text-[20px] cursor-pointer font-serif border-b-[3px] w-fit border-b-[#bc60fb]  ">
               dkirigha18@gmail.com
             </h2>
             <ul className=" flex flex-col mt-5 ">
-              <li className=" text-white text-[20px] cursor-pointer font-serif">
+              <li className=" text-white text-[1.1rem] leading-[1.8rem] xl:text-[1.1rem] font-serif cursor-pointer font-serif">
                 LinkedIn
               </li>
-              <li className=" text-white text-[20px] cursor-pointer font-serif">
+              <li className=" text-white text-[1.1rem] leading-[1.8rem] xl:text-[1.1rem] font-serif cursor-pointer font-serif">
                 Github
               </li>
-              <li className=" text-white text-[20px] cursor-pointer font-serif">
+              <li className=" text-white text-[1.1rem] leading-[1.8rem] xl:text-[1.1rem] font-serif cursor-pointer font-serif">
                 Messanger
               </li>
             </ul>
           </div>
         </div>
 
-        <div className=" w-full flex h-full px-5">
-          <div className=" bg-[#bc60fb] w-[50%]">
-            <div className=" p-6 flex items-center justify-between">
-              <FaQuoteRight className=" h-16 w-16 text-white/40" />
-              <span className=" h-20 w-20 rounded-full flex items-center justify-center text-[18px] text-white font-[700] bg-[#430d79]">
-                AE
-              </span>
-            </div>
-            <div className=" p-5">
-              <p className=" text-white text-[19px] font-serif  ">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
-                dolor pariatur distinctio totam, et dicta nostrum dolorem eaque
-                laborum. Accusantium architecto, dolorem vitae accusamus ex
-                temporibus molestias commodi molestiae hic? Quos id temporibus
-                perspiciatis, illo ducimus ex inventore voluptatem maxime.
-                Officiis adipisci voluptatum accusantium neque asperiores
-                aliquid ipsam impedit atque mollitia delectus itaque autem
-                cupiditate totam fugit at, expedita aspernatur? Vel, saepe.
-                Consectetur, neque!
-              </p>
-              <div className=" text-white mt-5">
-                <p>- Aaron Etler</p>
-                <p>Chief Technology Officer at Griffin Global Solutions</p>
-              </div>
-            </div>
-          </div>
-          <div className=" bg-[#923fe6] w-[50%]">
-            <div className=" bg-[#0067dc]">
+        <div className=" w-full flex flex-col md:flex-row  h-full">
+            <div className=" bg-[#bc60fb] w-full md:w-[50%]">
               <div className=" p-6 flex items-center justify-between">
                 <FaQuoteRight className=" h-16 w-16 text-white/40" />
                 <span className=" h-20 w-20 rounded-full flex items-center justify-center text-[18px] text-white font-[700] bg-[#430d79]">
                   AE
                 </span>
               </div>
-              <div className=" px-4">
-                <p className=" text-white">
+              <div className=" p-5">
+                <p className=" text-white text-[19px] font-serif  ">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
                   dolor pariatur distinctio totam, et dicta nostrum dolorem
                   eaque laborum. Accusantium architecto, dolorem vitae accusamus
-                  ex temporibus molestias commodi molestiae hic?
+                  ex temporibus molestias commodi molestiae hic? Quos id
+                  temporibus perspiciatis, illo ducimus ex inventore voluptatem
+                  maxime. Officiis adipisci voluptatum accusantium neque
+                  asperiores aliquid ipsam impedit atque mollitia delectus
+                  itaque autem cupiditate totam fugit at, expedita aspernatur?
+                  Vel, saepe. Consectetur, neque!
                 </p>
-                <div className=" text-white py-5 ">
+                <div className=" text-white mt-5">
                   <p>- Aaron Etler</p>
-                  <p>CTO at Griffin Global Solutions</p>
+                  <p>Chief Technology Officer at Griffin Global Solutions</p>
                 </div>
               </div>
             </div>
-            <div className=" bg-[#923fe6]">
-              <div className=" p-6 flex items-center justify-between">
-                <FaQuoteRight className=" h-16 w-16 text-white/40" />
-                <span className=" h-20 w-20 rounded-full flex items-center justify-center text-[18px] text-white font-[700] bg-[#430d79]">
-                  AE
-                </span>
+            <div className=" bg-[#923fe6] w-full md:w-[50%]">
+              <div className=" bg-[#0067dc]">
+                <div className=" p-6 flex items-center justify-between">
+                  <FaQuoteRight className=" h-16 w-16 text-white/40" />
+                  <span className=" h-20 w-20 rounded-full flex items-center justify-center text-[18px] text-white font-[700] bg-[#430d79]">
+                    AE
+                  </span>
+                </div>
+                <div className=" px-4">
+                  <p className=" text-white">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Sit dolor pariatur distinctio totam, et dicta nostrum
+                    dolorem eaque laborum. Accusantium architecto, dolorem vitae
+                    accusamus ex temporibus molestias commodi molestiae hic?
+                  </p>
+                  <div className=" text-white py-5 ">
+                    <p>- Aaron Etler</p>
+                    <p>CTO at Griffin Global Solutions</p>
+                  </div>
+                </div>
               </div>
-              <div className=" px-4">
-              <p className=" text-white">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
-                dolor pariatur distinctio totam, et dicta nostrum dolorem eaque
-                laborum. Accusantium architecto, dolorem vitae accusamus ex
-                temporibus molestias commodi molestiae hic?
-              </p>
-              <div className=" text-white my-5">
-                <p>- Aaron Etler</p>
-                <p>CTO at Griffin Global Solutions</p>
-              </div>
-
+              <div className=" bg-[#923fe6]">
+                <div className=" p-6 flex items-center justify-between">
+                  <FaQuoteRight className=" h-16 w-16 text-white/40" />
+                  <span className=" h-20 w-20 rounded-full flex items-center justify-center text-[18px] text-white font-[700] bg-[#430d79]">
+                    AE
+                  </span>
+                </div>
+                <div className=" px-4">
+                  <p className=" text-white">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Sit dolor pariatur distinctio totam, et dicta nostrum
+                    dolorem eaque laborum. Accusantium architecto, dolorem vitae
+                    accusamus ex temporibus molestias commodi molestiae hic?
+                  </p>
+                  <div className=" text-white my-5">
+                    <p>- Aaron Etler</p>
+                    <p>CTO at Griffin Global Solutions</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
       </div>
     </div>
   );

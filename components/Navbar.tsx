@@ -19,10 +19,10 @@ const Navbar = (props: Props) => {
             DevSam
           </span>
         </span>
-        <div className="container justify-center flex gap-4 relative items-center">
+        <div className="w-full justify-start pl-10 flex gap-4 relative items-center">
           <div
             className={`
-        absolute lg:static flex-col w-[200px] shadow-lg p-3 items-center lg:shadow-none lg:p-0 lg:w-auto transition-all duration-150 ease-linear lg:transition-none
+        absolute lg:static flex-col w-[200px] ml-20 shadow-lg p-3 items-center lg:shadow-none lg:p-0 lg:w-auto transition-all duration-150 ease-linear lg:transition-none
         lg:flex-row bg-white lg:bg-transparent lg:items-end top-[60px] right-0
         ${showNavItems ? "flex" : "hidden lg:flex"}
         `}
@@ -30,21 +30,21 @@ const Navbar = (props: Props) => {
             <Link
               onClick={() => setShowNavItems(false)}
               href="/"
-              className="lg:ml-7 mt-4 lg:mt-0 !text-dark lg:!text-[#efe0ca] hover:underline  cursor-pointer text-xl font-medium tracking-wide"
+              className="lg:ml-7 mt-4 lg:mt-0 !text-red-500 hover:underline !lg:text-white  cursor-pointer text-xl font-medium tracking-wide"
             >
               Home
             </Link>
             <Link
               onClick={() => setShowNavItems(false)}
               href="/About"
-              className="lg:ml-7 mt-4 lg:mt-0 !text-dark lg:!text-[#efe0ca] hover:underline cursor-pointer text-xl font-medium whitespace-nowrap xl:tracking-wide"
+              className="lg:ml-7 mt-4 lg:mt-0 !text-white hover:underline cursor-pointer text-xl font-medium whitespace-nowrap xl:tracking-wide"
             >
               About me
             </Link>
             <Link
               onClick={() => setShowNavItems(false)}
               href="/Contact"
-              className="lg:ml-7 mt-4 lg:mt-0 !text-dark lg:!text-[#efe0ca] hover:underline cursor-pointer text-xl font-medium whitespace-nowrap tracking-wide"
+              className="lg:ml-7 mt-4 lg:mt-0 !text-white hover:underline cursor-pointer text-xl font-medium whitespace-nowrap tracking-wide"
             >
               Contact me
             </Link>
@@ -54,9 +54,9 @@ const Navbar = (props: Props) => {
             className="ml-auto sm:block lg:hidden"
           >
             {showNavItems ? (
-              <MdClose className="h-20 ml-auto cursor-pointer text-2xl font-[700] !text-beige" />
+              <MdClose className="h-20 ml-auto cursor-pointer text-2xl font-[700] text-white" />
             ) : (
-              <GoThreeBars className="h-20 ml-auto cursor-pointer !text-beige " />
+              <GoThreeBars className="h-20 ml-auto cursor-pointer text-red-500 " />
             )}
           </div>
         </div>
