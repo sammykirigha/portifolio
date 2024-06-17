@@ -18,3 +18,115 @@ export const langs = [
 	{ id: 16, name: 'AWS', icon: '/icons/aws.png' },
 	{ id: 17, name: 'Yarn', icon: '/icons/yarn.png' },
 ]
+
+export interface Project {
+	name: string,
+	image: string,
+	link: string,
+	id: number,
+	style: {
+		col: string,
+		md: string,
+		row: string
+	}
+	category: string
+}
+
+export const projects: Project[] = [
+	{
+		name: "Flight Local Web App",
+		image: "/project-8.jpg",
+		link: "",
+		style: {
+			col: "col-span-1",
+			row: "",
+			md: "",
+		},
+		id: 1,
+		category: "Web Development"
+	},
+	{
+		name: "Travel Web App",
+		image: "/project-7.webp",
+		link: "",
+		style: {
+			col: "col-span-1",
+			md: "",
+			row: ""
+		},
+		id: 2,
+		category: "Data Visualization"
+	},
+	{
+		name: "Rental Application",
+		image: "/project-2.jpg",
+		link: "",
+		style: {
+			col: "col-span-1",
+			md: "",
+			row: ""
+		},
+		id: 3,
+		category: "Web Development"
+	},
+	{
+		name: "Furniture Web Application",
+		image: "/project-4.webp",
+		link: "",
+		style: {
+			col: "col-span-1",
+			md: "",
+			row: ""
+		},
+		id: 4,
+		category: "Web Development"
+	},
+	{
+		name: "Real Estate Web App",
+		image: "/project-5.webp",
+		link: "",
+		style: {
+			col: "col-span-1",
+			row: "row-span-1",
+			md: "col-span-2",
+		},
+		id: 5,
+		category: "Web Development"
+	},
+	{
+		name: "Service Provider Web App",
+		image: "/project.jpg",
+		link: "",
+		style: {
+			col: "col-span-1",
+			md: "",
+			row: ""
+		},
+		id: 6,
+		category: "Data Visualization"
+	},
+	{
+		name: "Project Tracker Web App",
+		image: "/project-6.webp",
+		link: "",
+		style: {
+			col: "col-span-1",
+			md: "",
+			row: ""
+		},
+		id: 7,
+		category: "Web Development"
+	},
+	{
+		name: "E-Commerce Web App",
+		image: "/project-8.jpg",
+		link: "",
+		style: {
+			col: "col-span-1",
+			md: "",
+			row: ""
+		},
+		id: 8,
+		category: "Web Development"
+	},
+]

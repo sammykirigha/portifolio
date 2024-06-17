@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import project from "../public/project.jpg";
 import logo from "../public/griffin-logo.png";
@@ -15,6 +15,8 @@ import {
 } from "../components/ui/Accordion";
 import { RiMapPinFill } from "react-icons/ri";
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
+import { Project, projects } from "../utils/language";
+import Link from "next/link";
 
 type Props = {};
 
@@ -30,6 +32,34 @@ const HomePage = (props: Props) => {
       });
     });
   };
+
+  const [filterString, setFilterString] = useState<string>("")
+  const [projectsArray, setProjectsArray] = useState<Project[]>([]);
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>([])
+
+  useEffect(() => {
+    setProjectsArray(projects)
+   setFilteredProjects(projects);
+  },[])
+
+
+  useEffect(() => {
+    const filterProjects = () => {
+      if(filterString === "all" || filterString === ""){
+        setFilteredProjects(projects); 
+      }
+      if(filterString === "Data Visualization"){
+        let dataProj = projectsArray.filter((item:Project) => item?.category === "Data Visualization");
+        setFilteredProjects(dataProj);
+      }
+      if(filterString === "Web Development"){
+       let webProj =  projectsArray.filter((item:Project) => item?.category === "Web Development");
+       setFilteredProjects(webProj);
+      }
+    }
+
+    filterProjects()
+  },[filterString, filteredProjects, projectsArray])
 
   return (
     <div className="bg-[#001233]/95">
@@ -150,32 +180,37 @@ const HomePage = (props: Props) => {
         <div className=" px-5 lg:px-20 2xl:px-60">
           <div className="">
             <ul className=" flex items-center gap-5">
-              <li className=" text-[#c6c5c6] text-[20px] font-[800]">
+              <li className=" text-[#c6c5c6] text-[12px] md:text-[20px] font-[800]">
                 Filter by
               </li>
               <li className=" flex gap-2 relative cursor-pointer group">
-                <span className="text-[#c6c5c6] text-[18px] font-[700] group-hover:text-[#ff595a]">
+                <span onClick={() => setFilterString("all")} 
+                className={`${filterString === "all" || filterString === "" ? 'text-[#bc60fb]' : "text-[#c6c5c6]"}  text-[12px] md:text-[18px] font-[700] group-hover:!text-[#bc60fb]`}>
                   All
                 </span>
-                <span className="text-[#c6c5c6] text-[18px] font-[700] group-hover:text-[#ff595a] absolute -top-2 left-6">
+                <span className={`${filterString === "all" || filterString === "" ? 'text-[#bc60fb]' : "text-[#c6c5c6]"} text-[12px] md:text-[18px] font-[700] group-hover:!text-[#bc60fb] absolute -top-2 left-6`}>
                   10
                 </span>
               </li>
               <div className=" bg-[#c6c5c6] h-5 w-[2px] origin-bottom rotate-12 ml-[4px]"></div>
               <li className=" flex gap-2 relative cursor-pointer group">
-                <span className="text-[#c6c5c6] text-[18px] font-[700] group-hover:text-[#ff595a]">
+                <span onClick={() => setFilterString("Data Visualization")}  
+                className={`${filterString === "Data Visualization" ? "text-[#bc60fb]" : "text-[#c6c5c6]"}  text-[12px] md:text-[18px] font-[700] group-hover:!text-[#bc60fb]`}>
                   Data Visualization
                 </span>
-                <span className="text-[#c6c5c6] text-[18px] font-[700] group-hover:text-[#ff595a] absolute -top-2 -right-[7%] ">
+                <span className={`${filterString === "Data Visualization" ? "text-[#bc60fb]" : "text-[#c6c5c6]"}  text-[12px] md:text-[18px] font-[700] group-hover:!text-[#bc60fb] absolute -top-2 -right-[7%]`}>
                   1
                 </span>
               </li>
               <div className=" bg-[#c6c5c6] h-5 w-[2px] origin-bottom rotate-12"></div>
               <li className=" flex gap-2 relative cursor-pointer group">
-                <span className="text-[#c6c5c6] text-[18px] font-[700] group-hover:text-[#ff595a]">
+                <span onClick={() => {
+                  setFilterString("Web Development");
+                  console.log("logging web development")
+                }}  className={`${filterString === "Web Development" ? 'text-[#bc60fb]' : 'text-[#c6c5c6]'} text-[12px] md:text-[18px] font-[700] group-hover:!text-[#bc60fb]`}>
                   Web Development
                 </span>
-                <span className="text-[#c6c5c6] text-[18px] font-[700] group-hover:text-[#ff595a] absolute -top-3 -right-[12%]">
+                <span className={`${filterString === "Web Development" ? 'text-[#bc60fb]' : 'text-[#c6c5c6]'} text-[12px] md:text-[18px] font-[700] group-hover:!text-[#bc60fb] absolute -top-3 -right-[12%]`}>
                   09
                 </span>
               </li>
@@ -184,182 +219,39 @@ const HomePage = (props: Props) => {
 
           <div className=" mt-7">
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-start">
-              <div className="group cursor-pointer rounded-lg col-span-1 ">
-                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
-                  <Image
-                    src={project}
-                    alt=""
-                    className=" object-cover rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
-                  />
-                </div>
-                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
-                  <p className=" text-[22px] leading-[19px] font-[700] py-3">
-                    Flight Local Web App
-                  </p>
-                  <div className=" relative">
-                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
-                      Web Development
-                    </p>
-                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
-                      View Project
-                    </span>
+              {filteredProjects.map((item) => {
+                return (
+                  <div key={item?.id} className={`group cursor-pointer rounded-lg ${item?.style?.col}  ${item?.id === 5 ? `${item?.style?.row} md:${item?.style?.md}` : ""} ${item?.id === 6 ? "mt-0 sm:-mt-16 md:mt-0" : ""}`} > 
+                    <div className=" rounded-t-lg relative h-[300px] min-w-[350px] overflow-hidden cursor-pointer ">
+                      <Image
+                        src={item?.image}
+                        alt=""
+                        fill={true}
+                        width={0}
+                        height={0}
+                        sizes="100vw, 100vh "
+                        objectPosition="center"
+                        objectFit="cover"
+                        className=" object-cover rounded-t-lg boarder  transform transition duration-700 ease-in-out group-hover:scale-110"
+                      />
+                    </div>
+                    <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
+                      <p className=" text-[22px] leading-[19px] font-[700] py-3">
+                        {item?.name+item?.id}
+                      </p>
+                      <div className=" relative">
+                        <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
+                          {item?.category}
+                        </p>
+                        <Link href={item?.link}  className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
+                          View Project
+                        </Link>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="group cursor-pointer rounded-lg col-span-1">
-                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
-                  <Image
-                    src={project}
-                    alt=""
-                    className=" object-cover rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
-                  />
-                </div>
-                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
-                  <p className=" text-[22px] leading-[19px] font-[700] py-3">
-                    Flight Local Web App
-                  </p>
-                  <div className=" relative">
-                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
-                      Web Development
-                    </p>
-                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
-                      View Project
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className="group cursor-pointer rounded-lg col-span-1">
-                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
-                  <Image
-                    src={project}
-                    alt=""
-                    className="  object-cover rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
-                  />
-                </div>
-                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
-                  <p className=" text-[22px] leading-[19px] font-[700] py-3">
-                    Flight Local Web App
-                  </p>
-                  <div className=" relative">
-                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
-                      Web Development
-                    </p>
-                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
-                      View Project
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className="group cursor-pointer rounded-lg col-span-1">
-                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
-                  <Image
-                    src={project}
-                    alt=""
-                    className=" object-cover rounded-t-lg boarder min-h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
-                  />
-                </div>
-                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
-                  <p className=" text-[22px] leading-[19px] font-[700] py-3">
-                    Flight Local Web App
-                  </p>
-                  <div className=" relative">
-                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
-                      Web Development
-                    </p>
-                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
-                      View Project
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className=" col-span-1 md:col-span-2 row-span-1 group cursor-pointer rounded-lg">
-                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
-                  <Image
-                    src={project}
-                    alt=""
-                    className=" object-cover rounded-t-lg boarder  transform transition duration-700 ease-in-out group-hover:scale-110"
-                  />
-                </div>
-                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
-                  <p className=" text-[22px] leading-[19px] font-[700] py-3">
-                    Flight Local Web App
-                  </p>
-                  <div className=" relative">
-                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
-                      Web Development
-                    </p>
-                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
-                      View Project
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-0 sm:-mt-16 md:mt-0 lg:-mt-16 group cursor-pointer rounded-lg">
-                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
-                  <Image
-                    src={project}
-                    alt=""
-                    className=" object-cover rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
-                  />
-                </div>
-                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
-                  <p className=" text-[22px] leading-[19px] font-[700] py-3">
-                    Flight Local Web App
-                  </p>
-                  <div className=" relative">
-                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
-                      Web Development
-                    </p>
-                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
-                      View Project
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className="group cursor-pointer rounded-lg">
-                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
-                  <Image
-                    src={project}
-                    alt=""
-                    className=" object-cover rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
-                  />
-                </div>
-                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
-                  <p className=" text-[22px] leading-[19px] font-[700] py-3">
-                    Flight Local Web App
-                  </p>
-                  <div className=" relative">
-                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
-                      Web Development
-                    </p>
-                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
-                      View Project
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className="group cursor-pointer rounded-lg">
-                <div className=" rounded-t-lg relative overflow-hidden cursor-pointer ">
-                  <Image
-                    src={project}
-                    alt=""
-                    className="  object-cover rounded-t-lg boarder h-[300px] min-w-[350px] transform transition duration-700 ease-in-out group-hover:scale-110"
-                  />
-                </div>
-                <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
-                  <p className=" text-[22px] leading-[19px] font-[700] py-3">
-                    Flight Local Web App
-                  </p>
-                  <div className=" relative">
-                    <p className="leading-[19px] font-[700] group-hover:-translate-y-12 group-hover:transition group-hover:duration-700 duration-700 ease-in-out group-hover:opacity-0">
-                      Web Development
-                    </p>
-                    <span className=" absolute top-0 leading-[19px] font-[700] opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition duration-700 ">
-                      View Project
-                    </span>
-                  </div>
-                </div>
-              </div>
+                );
+              })}
+             
             </div>
           </div>
         </div>
@@ -379,7 +271,7 @@ const HomePage = (props: Props) => {
               <AccordionTrigger className="">
                 <div className=" text-white h-16 rounded-lg bg-[#430d79] w-full flex flex-col md:flex-row items-center justify-around ">
                   <h3 className=" text-[14px] md:text-[20px]">
-                    Mid-Level Software Engineer @ Global Griffin Tech{" "}
+                    Mid Software Engineer @ Global Griffin Tech{" "}
                   </h3>
                   <h3 className=" text-[14px] md:text-[20px]">
                     2023 - Present
@@ -549,7 +441,7 @@ const HomePage = (props: Props) => {
       </div>
 
       {/* section six */}
-      <div className="flex flex-col-reverse md:flex-row bg-[#001233]/95 mt-10 pb-10 items-start h-full justify-center">
+      <div className="flex flex-col-reverse md:flex-row xl:px-10 bg-[#001233]/95 mt-10 pb-10 items-start h-full justify-center">
         <div className="  min-w-[40%] mt-10 px-5">
           <div className="">
             <h2 className=" text-center md:text-start text-[43px] leading-[48px] font-bold text-white">
@@ -612,74 +504,74 @@ const HomePage = (props: Props) => {
         </div>
 
         <div className=" w-full flex flex-col md:flex-row  h-full">
-            <div className=" bg-[#bc60fb] w-full md:w-[50%]">
+          <div className=" bg-[#bc60fb] w-full md:w-[50%]">
+            <div className=" p-6 flex items-center justify-between">
+              <FaQuoteRight className=" h-16 w-16 text-white/40" />
+              <span className=" h-20 w-20 rounded-full flex items-center justify-center text-[18px] text-white font-[700] bg-[#430d79]">
+                AE
+              </span>
+            </div>
+            <div className=" p-5">
+              <p className=" text-white text-[19px] font-serif  ">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
+                dolor pariatur distinctio totam, et dicta nostrum dolorem eaque
+                laborum. Accusantium architecto, dolorem vitae accusamus ex
+                temporibus molestias commodi molestiae hic? Quos id temporibus
+                perspiciatis, illo ducimus ex inventore voluptatem maxime.
+                Officiis adipisci voluptatum accusantium neque asperiores
+                aliquid ipsam impedit atque mollitia delectus itaque autem
+                cupiditate totam fugit at, expedita aspernatur? Vel, saepe.
+                Consectetur, neque!
+              </p>
+              <div className=" text-white mt-5">
+                <p>- Aaron Etler</p>
+                <p>Chief Technology Officer at Griffin Global Solutions</p>
+              </div>
+            </div>
+          </div>
+          <div className=" bg-[#923fe6] w-full md:w-[50%]">
+            <div className=" bg-[#0067dc]">
               <div className=" p-6 flex items-center justify-between">
                 <FaQuoteRight className=" h-16 w-16 text-white/40" />
                 <span className=" h-20 w-20 rounded-full flex items-center justify-center text-[18px] text-white font-[700] bg-[#430d79]">
                   AE
                 </span>
               </div>
-              <div className=" p-5">
-                <p className=" text-white text-[19px] font-serif  ">
+              <div className=" px-4">
+                <p className=" text-white">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
                   dolor pariatur distinctio totam, et dicta nostrum dolorem
                   eaque laborum. Accusantium architecto, dolorem vitae accusamus
-                  ex temporibus molestias commodi molestiae hic? Quos id
-                  temporibus perspiciatis, illo ducimus ex inventore voluptatem
-                  maxime. Officiis adipisci voluptatum accusantium neque
-                  asperiores aliquid ipsam impedit atque mollitia delectus
-                  itaque autem cupiditate totam fugit at, expedita aspernatur?
-                  Vel, saepe. Consectetur, neque!
+                  ex temporibus molestias commodi molestiae hic?
                 </p>
-                <div className=" text-white mt-5">
+                <div className=" text-white py-5 ">
                   <p>- Aaron Etler</p>
-                  <p>Chief Technology Officer at Griffin Global Solutions</p>
+                  <p>CTO at Griffin Global Solutions</p>
                 </div>
               </div>
             </div>
-            <div className=" bg-[#923fe6] w-full md:w-[50%]">
-              <div className=" bg-[#0067dc]">
-                <div className=" p-6 flex items-center justify-between">
-                  <FaQuoteRight className=" h-16 w-16 text-white/40" />
-                  <span className=" h-20 w-20 rounded-full flex items-center justify-center text-[18px] text-white font-[700] bg-[#430d79]">
-                    AE
-                  </span>
-                </div>
-                <div className=" px-4">
-                  <p className=" text-white">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Sit dolor pariatur distinctio totam, et dicta nostrum
-                    dolorem eaque laborum. Accusantium architecto, dolorem vitae
-                    accusamus ex temporibus molestias commodi molestiae hic?
-                  </p>
-                  <div className=" text-white py-5 ">
-                    <p>- Aaron Etler</p>
-                    <p>CTO at Griffin Global Solutions</p>
-                  </div>
-                </div>
+            <div className=" bg-[#923fe6]">
+              <div className=" p-6 flex items-center justify-between">
+                <FaQuoteRight className=" h-16 w-16 text-white/40" />
+                <span className=" h-20 w-20 rounded-full flex items-center justify-center text-[18px] text-white font-[700] bg-[#430d79]">
+                  AE
+                </span>
               </div>
-              <div className=" bg-[#923fe6]">
-                <div className=" p-6 flex items-center justify-between">
-                  <FaQuoteRight className=" h-16 w-16 text-white/40" />
-                  <span className=" h-20 w-20 rounded-full flex items-center justify-center text-[18px] text-white font-[700] bg-[#430d79]">
-                    AE
-                  </span>
-                </div>
-                <div className=" px-4">
-                  <p className=" text-white">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Sit dolor pariatur distinctio totam, et dicta nostrum
-                    dolorem eaque laborum. Accusantium architecto, dolorem vitae
-                    accusamus ex temporibus molestias commodi molestiae hic?
-                  </p>
-                  <div className=" text-white my-5">
-                    <p>- Aaron Etler</p>
-                    <p>CTO at Griffin Global Solutions</p>
-                  </div>
+              <div className=" px-4">
+                <p className=" text-white">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
+                  dolor pariatur distinctio totam, et dicta nostrum dolorem
+                  eaque laborum. Accusantium architecto, dolorem vitae accusamus
+                  ex temporibus molestias commodi molestiae hic?
+                </p>
+                <div className=" text-white my-5">
+                  <p>- Aaron Etler</p>
+                  <p>CTO at Griffin Global Solutions</p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
       </div>
     </div>
   );
