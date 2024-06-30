@@ -1,6 +1,8 @@
+"use client"
+
 import React, { useState } from "react";
 import Link from "next/link";
-import { GoThreeBars } from "react-icons/go";
+import { FaBars } from "react-icons/fa";
 import { GrClose } from "react-icons/gr";
 import { MdClose } from "react-icons/md";
 import { FaRegLightbulb } from "react-icons/fa";
@@ -56,7 +58,7 @@ const Navbar = (props: Props) => {
             {showNavItems ? (
               <MdClose className="h-20 ml-auto cursor-pointer text-2xl font-[700] text-[#bc60fb]" />
             ) : (
-              <GoThreeBars className="h-20 ml-auto cursor-pointer text-[#bc60fb] " />
+              <FaBars className="h-20 ml-auto cursor-pointer text-[#bc60fb] " />
             )}
           </div>
         </div>

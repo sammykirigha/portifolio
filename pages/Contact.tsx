@@ -16,15 +16,14 @@ const Contact = () => {
   const { register, handleSubmit, formState: { errors, isSubmitting, isValid }, } = useForm<IFormInput>();
 
   const onSubmit: SubmitHandler<IFormInput> = async (data: IFormInput) => {
-    console.log("data", data);
     //confirm email and message field are not empty
     if (!data.email || !data.message) {
       toast({
-        message: "Email and message are required fields"
+        description: "Email and message are required fields"
       });
       return;
     }
-
+    
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -33,31 +32,34 @@ const Contact = () => {
         },
         body: JSON.stringify({
           email: data.email,
+          name: data.name,
+          subject: data.subject,
           message: data.message,
         }),
       });
+      console.log("response", response);
 
       // handle success
       if (response.ok) {
-        showToast.success("Email Sent Successfully!");
+        toast({description: "Your message has been sent."})
       } else {
-        showToast.error("There was a problem sending email. Pls try again!");
+         toast({description: "There was a problem sending email. Pls try again!"});
       }
     } catch (error) {
-      showToast.error("There was a problem sending email. Pls try again!");
+       toast({description: "There was a problem sending email. Pls try again!"});
     } finally {
-      setIsSending(false);
+      // setIsSending(false);
     }
   };
   return (
     <div className="flex items-center justify-center px-5 lg:px-20 2xl:px-60 bg-[#001233]/95 ">
       <div className=" flex flex-col  justify-center items-center mt-16">
-        <h1 className="text-[2rem] lg:text-[2.5rem] tracking-[0.03em] lg:tracking-[0.1em] text-center font-[700] text-white opacity-80 uppercase  leading-[3rem]">
+        <h1 className="text-[2rem] lg:text-[2.5rem] tracking-[0.03em] lg:tracking-[0.1em] text-center font-[700] text-white uppercase  leading-[3rem]">
           I Love to hear from you, <br></br> Get in touch 👋{" "}
         </h1>
         <p className="text-[1.2rem] text-center mt-7 text-white ">
           Feel free to contact me with questions about any of my project or
-          services. <br></br> I'll get back to you within 24 hours! <br></br>
+          services. <br></br> I&apos;ll get back to you within 24 hours! <br></br>
           <strong className="text-[#bc60fb]">
             {" "}
             +254707256013 dkirigha18@gmail.com
