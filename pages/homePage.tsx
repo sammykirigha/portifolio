@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import project from "../public/project.jpg";
 import logo from "../public/griffin-logo.png";
+import upwork from "../public/upwork.png";
 import { TbBrandReactNative } from "react-icons/tb";
 import { MdComputer } from "react-icons/md";
 import { FaReact } from "react-icons/fa";
@@ -21,17 +21,6 @@ import Link from "next/link";
 type Props = {};
 
 const HomePage = (props: Props) => {
-  const onDownloadCv = () => {
-    fetch("/myResume.pdf").then((response) => {
-      response.blob().then((blob) => {
-        const fileURL = window.URL.createObjectURL(blob);
-        let alink = document.createElement("a");
-        alink.href = fileURL;
-        alink.download = "myResume.pdf";
-        alink.click();
-      });
-    });
-  };
 
   const [filterString, setFilterString] = useState<string>("")
   const [projectsArray, setProjectsArray] = useState<Project[]>([]);
@@ -221,18 +210,18 @@ const HomePage = (props: Props) => {
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-start">
               {filteredProjects.map((item) => {
                 return (
-                  <div key={item?.id} className={`group cursor-pointer rounded-lg ${item?.style?.col}  ${item?.id === 5 ? `${item?.style?.row} md:${item?.style?.md}` : ""} ${item?.id === 6 ? "mt-0 sm:-mt-16 md:mt-0" : ""}`} > 
-                    <div className=" rounded-t-lg relative h-[300px] min-w-[350px] overflow-hidden cursor-pointer ">
+                  <div key={item?.id} className={`group cursor-pointer rounded-lg ${item?.style?.col} ${item?.id === 5 ? `${item?.style?.row} md:col-span-2` : ""} ${item?.id === 6 ? `mt-0 sm:-mt-16 md:mt-0 ${filterString === "Data Visualization" ? "lg:mt-0" : "lg:-mt-48"} `: ""}`} >  
+                    <div className={`rounded-t-lg relative  ${item?.id === 5 ? `h-[500px]  p-10` : "h-[300px]"}  min-w-[350px] overflow-hidden cursor-pointer`}>
                       <Image
                         src={item?.image}
                         alt=""
                         fill={true}
                         width={0}
                         height={0}
-                        sizes="100vw, 100vh "
+                        sizes="100vw"
                         objectPosition="center"
                         objectFit="cover"
-                        className=" object-cover rounded-t-lg boarder  transform transition duration-700 ease-in-out group-hover:scale-110"
+                        className={`object-cover rounded-t-lg boarder transform transition duration-700 ease-in-out group-hover:scale-110`}
                       />
                     </div>
                     <div className="text-white rounded-lg py-6 bg-[#001233]/95 flex flex-col items-center justify-center w-full">
@@ -293,9 +282,10 @@ const HomePage = (props: Props) => {
                   <div className=" flex flex-col md:row gap-6">
                     <div className=" flex flex-col mt-5">
                       <p className=" text-white text-wraps">
-                        Developing front-end and mobile app solutions (B2C, B2B)
-                        in Travel Tech on React/Next.js framework and Flutter
-                        SDK.
+                        As a full stack developer with over two years of experience, I have worked extensively with .NET, 
+                        JavaScript, React, Angular, Azure, and Next.js. I developed and maintained robust web applications, integrating front-end frameworks like React and Angular with .NET backends. Utilizing Azure for cloud services, I ensured scalable and secure deployments. 
+                        My projects often involved building responsive interfaces, optimizing performance, and implementing RESTful APIs. 
+                        This experience has honed my problem-solving skills and enabled me to deliver comprehensive solutions tailored to client needs.
                       </p>
                       <div className=" flex flex-wrap gap-3 mt-5">
                         <span className=" text-white bg-[#2c3599] rounded-full px-4 py-1">
@@ -350,9 +340,10 @@ const HomePage = (props: Props) => {
                   <div className=" flex flex-col md:row gap-6">
                     <div className=" flex flex-col mt-5">
                       <p className=" text-white text-wraps">
-                        Developing front-end and mobile app solutions (B2C, B2B)
-                        in Travel Tech on React/Next.js framework and Flutter
-                        SDK.
+                      During my software developer internship, I worked on a dynamic team where I contributed to the development of web applications using JavaScript and React. 
+                      I collaborated on code reviews, debugging, and implementing new features, gaining hands-on experience with version control systems like Git. 
+                      I also participated in daily stand-ups and sprint planning sessions, enhancing my understanding of agile methodologies. 
+                      This role allowed me to develop strong problem-solving skills and improve my ability to work effectively in a collaborative environment.
                       </p>
                       <div className=" flex flex-wrap gap-3 mt-5">
                         <span className=" text-white bg-[#2c3599] rounded-full px-4 py-1">
@@ -407,9 +398,8 @@ const HomePage = (props: Props) => {
                   <div className=" flex flex-col md:row gap-6">
                     <div className=" flex flex-col mt-5">
                       <p className=" text-white text-wraps">
-                        Developing front-end and mobile app solutions (B2C, B2B)
-                        in Travel Tech on React/Next.js framework and Flutter
-                        SDK.
+                      As a software developer on Upwork for less than a year, I worked with clients to build and enhance web applications using .NET and JavaScript technologies. I focused on developing user interfaces, optimizing performance, and debugging complex issues. 
+                      This experience helped me improve my technical skills, adapt to various project requirements, and deliver high-quality solutions efficiently while maintaining strong client communication.
                       </p>
                       <div className=" flex flex-wrap gap-3 mt-5">
                         <span className=" text-white bg-[#2c3599] rounded-full px-4 py-1">
@@ -430,7 +420,7 @@ const HomePage = (props: Props) => {
                       </div>
                     </div>
                     <div>
-                      <Image src={logo} alt="" className=" h-16 w-36" />
+                      <Image src={upwork} alt="" className=" h-16 w-36" />
                     </div>
                   </div>
                 </div>
@@ -486,19 +476,22 @@ const HomePage = (props: Props) => {
             </div>
           </div>
           <div className=" mt-5 flex flex-col items-center md:items-start">
-            <h2 className=" text-white text-[20px] cursor-pointer font-serif border-b-[3px] w-fit border-b-[#bc60fb]  ">
+            <h2 onClick={() => {
+                var email ="dkirigha18@gmail.com";
+                location.href = "mailto:"+email;
+            }} className=" text-white text-[20px] cursor-pointer font-serif border-b-[3px] w-fit border-b-[#bc60fb]  ">
               dkirigha18@gmail.com
             </h2>
             <ul className=" flex flex-col mt-5 ">
-              <li className=" text-white text-[1.1rem] leading-[1.8rem] xl:text-[1.1rem] font-serif cursor-pointer font-serif">
+              <Link href={"https://www.linkedin.com/in/samuel-kirigha-2b25531a6/"} className=" text-white text-[1.1rem] leading-[1.8rem] xl:text-[1.1rem] font-serif cursor-pointer font-serif">
                 LinkedIn
-              </li>
-              <li className=" text-white text-[1.1rem] leading-[1.8rem] xl:text-[1.1rem] font-serif cursor-pointer font-serif">
+              </Link>
+              <Link href={"https://github.com/sammykirigha"} className=" text-white text-[1.1rem] leading-[1.8rem] xl:text-[1.1rem] font-serif cursor-pointer font-serif">
                 Github
-              </li>
-              <li className=" text-white text-[1.1rem] leading-[1.8rem] xl:text-[1.1rem] font-serif cursor-pointer font-serif">
-                Messanger
-              </li>
+              </Link>
+              <Link href={"https://x.com/d_crigla"} className=" text-white text-[1.1rem] leading-[1.8rem] xl:text-[1.1rem] font-serif cursor-pointer font-serif">
+                Twitter
+              </Link>
             </ul>
           </div>
         </div>
@@ -513,24 +506,21 @@ const HomePage = (props: Props) => {
             </div>
             <div className=" p-5">
               <p className=" text-white text-[19px] font-serif  ">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
-                dolor pariatur distinctio totam, et dicta nostrum dolorem eaque
-                laborum. Accusantium architecto, dolorem vitae accusamus ex
-                temporibus molestias commodi molestiae hic? Quos id temporibus
-                perspiciatis, illo ducimus ex inventore voluptatem maxime.
-                Officiis adipisci voluptatum accusantium neque asperiores
-                aliquid ipsam impedit atque mollitia delectus itaque autem
-                cupiditate totam fugit at, expedita aspernatur? Vel, saepe.
-                Consectetur, neque!
+                I am pleased to recommend Samuel Kirigha for any opportunity that aligns with his skills and experience. 
+                Samuel has worked as a software Engineer at Griffins Global Tech, where he has demonstrated exceptional abilities such as in Azure infrastructure setup and proficiency in C#,
+                Javascript, React, and Angular technologies. Samuel is eager to learn new technologies and consistently seeks out ways to enhance his skills. 
+                He is also adept at helping onboarding new developers, ensuring they quickly integrate and become productive team members. 
+                His satisfactory problem-solving skills enable him to effectively tackle challenges and contributed
+                to the team&apos;s success.
               </p>
               <div className=" text-white mt-5">
-                <p>- Aaron Etler</p>
-                <p>Chief Technology Officer at Griffin Global Solutions</p>
+                <p>Aaron Ertler</p>
+                <p>CTO at Griffin Global Solutions</p>
               </div>
             </div>
           </div>
           <div className=" bg-[#923fe6] w-full md:w-[50%]">
-            <div className=" bg-[#0067dc]">
+            {/* <div className=" bg-[#0067dc]">
               <div className=" p-6 flex items-center justify-between">
                 <FaQuoteRight className=" h-16 w-16 text-white/40" />
                 <span className=" h-20 w-20 rounded-full flex items-center justify-center text-[18px] text-white font-[700] bg-[#430d79]">
@@ -549,24 +539,26 @@ const HomePage = (props: Props) => {
                   <p>CTO at Griffin Global Solutions</p>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className=" bg-[#923fe6]">
               <div className=" p-6 flex items-center justify-between">
                 <FaQuoteRight className=" h-16 w-16 text-white/40" />
                 <span className=" h-20 w-20 rounded-full flex items-center justify-center text-[18px] text-white font-[700] bg-[#430d79]">
-                  AE
+                  PK
                 </span>
               </div>
               <div className=" px-4">
                 <p className=" text-white">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
-                  dolor pariatur distinctio totam, et dicta nostrum dolorem
-                  eaque laborum. Accusantium architecto, dolorem vitae accusamus
-                  ex temporibus molestias commodi molestiae hic?
+                Samuel performance on the project was outstanding, demonstrating a deep understanding of .NET architecture and 
+                exceptional technical expertise. His clear communication, proactive attitude, and 
+                excellent collaboration skills ensured a smooth workflow and timely progress updates. 
+                While his performance exceeded our expectations, continuing to stay updated with the latest trends in the .NET 
+                ecosystem and exploring advanced topics like microservices and cloud integration with Azure could further enhance 
+                his already impressive skill set.
                 </p>
                 <div className=" text-white my-5">
-                  <p>- Aaron Etler</p>
-                  <p>CTO at Griffin Global Solutions</p>
+                  <p>Philip Kalela</p>
+                  <p>Upwork Client</p>
                 </div>
               </div>
             </div>

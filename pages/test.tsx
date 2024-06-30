@@ -1,8 +1,6 @@
 import React from 'react'
 
-type Props = {}
-
-const test = (props: Props) => {
+const test = () => {
   return (
     <div className='bg-red-800 text'>test</div>
   )
