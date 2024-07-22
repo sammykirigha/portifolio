@@ -54,12 +54,12 @@ const About = (props: Props) => {
 
       <div className="flex flex-col bg-beige w-full mb-10 pb-10 items-center">
         <h1 className="text-[1.3rem] text-center text-white mt-4 font-[700]">
-          Hey Friends 👋, I'm Samuel. Nice to Meet You
+          Hey Friends 👋, I&apos;m Samuel. Nice to Meet You
         </h1>
         <div className="flex flex-col items-center justify-center max-w-[600px] mt-8">
           <p className="text-center text-[1.1rem] text-white">
-            I graduated with a Bachelor's Degree in Computer Science from Karatina
-            University Of technology in Kenya. I'm currently a Software Engineer working
+            I graduated with a Bachelor&apos;s Degree in Computer Science from Karatina
+            University Of technology in Kenya. I&apos;m currently a Software Engineer working
             with .NET, ReactJs, NodeJs, GraphQl, Postgres, MongoDB and TypeScript.
           </p>
           
