@@ -8,9 +8,8 @@ import {
   Preview,
   Text,
 } from "@react-email/components";
-import { IFormInput } from "../pages/Contact";
 
-export const EmailTemplate = ({ message, email }: IFormInput) => {
+export const EmailTemplate = ({ message, email, subject, name }: {message: string, email: string,name: string, subject: string}) => {
   const containerStyle = {
     margin: "0 auto",
     padding: "0 1.25rem",
